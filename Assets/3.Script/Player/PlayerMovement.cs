@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+
         float horizon = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -78,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // 마우스 왼쪽 버튼을 누를 때
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isLaunch)
         {
             StartCharging();
         }
@@ -164,7 +165,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rotationX -= 360.0f;
         }
-        Debug.Log(rotationX);
         if (vertical > 0 && rotationX < -70.0f ||
             vertical < 0 && rotationX > 70.0f)
         {
@@ -189,6 +189,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public void Shoot()
     {
+        isLaunch = true;
+
         isCharging = false;
         Vector3 shootDirection = Arrow.transform.forward;
         float shootPower = Arrow.transform.localScale.z * ArrowScaleForceRatio;
@@ -212,6 +214,7 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         PlayerInitialise();
+        isLaunch = false;
         isReady = true;
         Arrow.SetActive(true);
 
