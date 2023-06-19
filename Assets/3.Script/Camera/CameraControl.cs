@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-#region
-
-#endregion
-
 public class CameraControl : MonoBehaviour
 {
     [Header("'Player' 태그가 붙은 오브젝트를 찾습니다.")]
-    [SerializeField] Transform Transform_player;
+    [SerializeField] GameObject GameObject_player;
+    [SerializeField] PlayerMovement playerMovement;
 
     [Space(0.2f)]
     [Header("Target")]
@@ -26,92 +23,70 @@ public class CameraControl : MonoBehaviour
     [SerializeField] float cameraDistanceAgainstTarget = 5.0f;
     [SerializeField] float cameraDistanceAgainstPlaent = 2.0f;
     [SerializeField] float cameraLookUp = 1.0f;
-    [SerializeField] float cameraDistance;
     [SerializeField] float cameraSpeed = 10.0f;
+
+    [Space(0.2f)]
+    [Header("확인용")]
+    [SerializeField] bool isFollow = false;
+    [SerializeField] Vector3 offset;
 
     private void Awake()
     {
-        cameraDistance = Mathf.Sqrt(Mathf.Pow(cameraDistanceAgainstTarget, 2) + Mathf.Pow(cameraDistanceAgainstPlaent, 2));
-        Transform_player = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject_player = GameObject.FindGameObjectWithTag("Player");
+        playerMovement = GameObject_player.GetComponent<PlayerMovement>();
     }
 
     private void Start()
     {
-        SetTarget(Transform_Firsttarget);
-        FindPlanets();
-        FindClosestPlanet();
-        Initialise();
+        CameraInitialise();
     }
 
 
-
-    private void LateUpdate()
+    // 인풋시스템으로 옮겨줄 예정.
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Initialise();
+            CameraInitialise();
         }
     }
 
     /// <summary>
     /// 카메라의 위치를 초기화합니다.
     /// </summary>
-    public void Initialise()
+    public void CameraInitialise()
     {
-        Vector3 directionUpNormal = (Transform_player.position - Transform_closestPlaent.position).normalized;
+        isFollow = false;
 
-        Vector3 directionSide = (Transform_player.position - Transform_target.position);
+        Vector3 directionUpNormal = (GameObject_player.transform.position - playerMovement.Transform_closestPlaent.position).normalized;
+
+        Vector3 directionSide = (GameObject_player.transform.position - playerMovement.Transform_target.position);
 
         Vector3 projectedVector = (directionSide - Vector3.Project(directionSide, directionUpNormal)).normalized;
 
-        Vector3 resultPosition = Transform_player.position + directionUpNormal * cameraDistanceAgainstPlaent + projectedVector * cameraDistanceAgainstTarget;
+        Vector3 resultPosition = GameObject_player.transform.position + directionUpNormal * cameraDistanceAgainstPlaent + projectedVector * cameraDistanceAgainstTarget;
 
         transform.position = resultPosition;
 
-        transform.LookAt(Transform_player.position + cameraLookUp * directionUpNormal);
+        transform.LookAt(GameObject_player.transform.position + cameraLookUp * directionUpNormal);
     }
 
     /// <summary>
-    /// "Planet" 태그를 가진 모든 오브젝트의 Transform을 Transforms_planet에 저장합니다.
+    /// player_shot을 하면 Player를 따라다니는 코루틴을 실행합니다.
     /// </summary>
-    public void FindPlanets()
+    public void CameraFollow()
     {
-        GameObject[] planetObjects = GameObject.FindGameObjectsWithTag("Planet");
-        Transforms_planet = new Transform[planetObjects.Length];
-        for (int i = 0; i < planetObjects.Length; i++)
+        isFollow = true;
+        offset = transform.position - GameObject_player.transform.position;
+        StartCoroutine(Co_CameraFollow());
+    }
+
+    IEnumerator Co_CameraFollow()
+    {
+        while(isFollow)
         {
-            Transforms_planet[i] = planetObjects[i].transform;
+            transform.position = Vector3.Lerp(transform.position, GameObject_player.transform.position + offset, Time.deltaTime * cameraSpeed);
+            yield return null;
         }
-    }
-
-    /// <summary>
-    /// 가장 가까운 Planet의 Transform을 Transform_closestPlaent에 저장합니다.
-    /// </summary>
-    public void FindClosestPlanet()
-    {
-        float closestDistance = Mathf.Infinity;
-        Transform closestPlanet = null;
-
-        foreach (Transform planet in Transforms_planet)
-        {
-            float distance = Vector3.Distance(Transform_player.position, planet.position);
-
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestPlanet = planet;
-            }
-        }
-
-        Transform_closestPlaent = closestPlanet;
-    }
-
-    /// <summary>
-    /// Target의 Transform을 Transform_target으로 정합니다.
-    /// </summary>
-    /// <param name="Transform_target"> 정해줄 Target의 Transform </param>
-    public void SetTarget(Transform Transform_target)
-    {
-        this.Transform_target = Transform_target;
     }
 }

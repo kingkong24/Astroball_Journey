@@ -123,6 +123,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &388526978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388526979}
+  m_Layer: 0
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &388526979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388526978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 543450653284301078}
+  m_Father: {fileID: 1242119422}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &437498253
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +260,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437498253}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &590940440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590940441}
+  m_Layer: 0
+  m_Name: Ball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &590940441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590940440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 543450652859277124}
+  m_Father: {fileID: 1242119422}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692736410
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c4e8bc6a39e4da3b68c1ed7bea1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Transform_player: {fileID: 0}
+  GameObject_player: {fileID: 0}
+  playerMovement: {fileID: 0}
   Transform_Firsttarget: {fileID: 1957910739}
   Transform_target: {fileID: 0}
   Transforms_planet: []
@@ -641,8 +706,9 @@ MonoBehaviour:
   cameraDistanceAgainstTarget: 5
   cameraDistanceAgainstPlaent: 2
   cameraLookUp: 1.8
-  cameraDistance: 0
   cameraSpeed: 10
+  isFollow: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1242119421
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +718,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1242119422}
+  - component: {fileID: 1242119425}
+  - component: {fileID: 1242119424}
+  - component: {fileID: 1242119427}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -671,11 +740,119 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 543450653284301078}
-  - {fileID: 543450652859277124}
+  - {fileID: 590940441}
+  - {fileID: 388526979}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1242119424
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242119421}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1242119425
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242119421}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0.5
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1242119427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242119421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1fdf78b1c30674eac3cf7a4d48fb47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 590940440}
+  Arrow: {fileID: 388526978}
+  Transform_Firsttarget: {fileID: 1957910739}
+  Transform_target: {fileID: 0}
+  Transforms_planet: []
+  Transform_closestPlaent: {fileID: 0}
+  MaxPower: 2
+  MinPower: 0.5
+  threshold: 0.1
+  rotationSpeed: 90
+  arrowScaleSpeed: 1
+  ArrowScaleForceRatio: 10
+  rigidbody: {fileID: 0}
+  arrowScale: 0
+  isReady: 0
+  isCharging: 0
+  isLaunch: 0
+  isArrowLarging: 0
+  Event_Ready:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194230}
+        m_TargetAssemblyTypeName: CameraControl, Assembly-CSharp
+        m_MethodName: CameraInitialise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Event_shot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194230}
+        m_TargetAssemblyTypeName: CameraControl, Assembly-CSharp
+        m_MethodName: CameraFollow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1721354233
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +934,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1242119422}
+    m_TransformParent: {fileID: 590940441}
     m_Modifications:
     - target: {fileID: 4653464706456208684, guid: 958a5a9d207362a4197d3e09a185a417, type: 3}
       propertyPath: m_RootOrder
@@ -819,7 +996,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball_Golf
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6736123071436333745, guid: 958a5a9d207362a4197d3e09a185a417, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -830,7 +1008,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1242119422}
+    m_TransformParent: {fileID: 388526979}
     m_Modifications:
     - target: {fileID: 4251779614918119416, guid: 47e93f3f6947d7442a74f0a872ee7fe4, type: 3}
       propertyPath: m_Name
@@ -862,7 +1040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7061985031639731104, guid: 47e93f3f6947d7442a74f0a872ee7fe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7061985031639731104, guid: 47e93f3f6947d7442a74f0a872ee7fe4, type: 3}
       propertyPath: m_LocalRotation.w
