@@ -25,6 +25,7 @@ public class CameraControl : MonoBehaviour
     [Header("¼³Á¤")]
     [SerializeField] float cameraDistanceAgainstTarget = 5.0f;
     [SerializeField] float cameraDistanceAgainstPlaent = 2.0f;
+    [SerializeField] float cameraLookUp = 1.0f;
     [SerializeField] float cameraDistance;
     [SerializeField] float cameraSpeed = 10.0f;
 
@@ -42,9 +43,14 @@ public class CameraControl : MonoBehaviour
         Initialise();
     }
 
+
+
     private void LateUpdate()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Initialise();
+        }
     }
 
     /// <summary>
@@ -52,7 +58,17 @@ public class CameraControl : MonoBehaviour
     /// </summary>
     public void Initialise()
     {
-        Vector3 direction = (Transform_closestPlaent.position - Transform_player.position).normalized;
+        Vector3 directionUpNormal = (Transform_player.position - Transform_closestPlaent.position).normalized;
+
+        Vector3 directionSide = (Transform_player.position - Transform_target.position);
+
+        Vector3 projectedVector = (directionSide - Vector3.Project(directionSide, directionUpNormal)).normalized;
+
+        Vector3 resultPosition = Transform_player.position + directionUpNormal * cameraDistanceAgainstPlaent + projectedVector * cameraDistanceAgainstTarget;
+
+        transform.position = resultPosition;
+
+        transform.LookAt(Transform_player.position + cameraLookUp * directionUpNormal);
     }
 
     /// <summary>
