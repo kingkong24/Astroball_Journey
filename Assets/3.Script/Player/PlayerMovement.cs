@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("È®ÀÎ¿ë")]
     [SerializeField] new Rigidbody rigidbody;
     [SerializeField] float arrowScale;
-    [SerializeField] bool isReady = false;
+    [SerializeField] bool isReady = true;
     [SerializeField] bool isCharging = false;
     [SerializeField] bool isLaunch = false;
     [SerializeField] bool isArrowLarging = false;
