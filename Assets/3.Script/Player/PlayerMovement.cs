@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(0.2f)]
     [Header("Target")]
-    [SerializeField] Transform Transform_Firsttarget; // 게임 메니저 생성시 지울 것.
     public Transform Transform_target;
 
     [Space(0.2f)]
@@ -55,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
     {
         FindPlanets();
         FindClosestPlanet();
-        SetTarget(Transform_Firsttarget);
         rigidbody = GetComponent<Rigidbody>();
     }
 

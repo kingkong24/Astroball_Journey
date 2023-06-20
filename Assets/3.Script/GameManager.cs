@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private void Start()
+    public static GameManager instance;
+
+    private void Awake()
     {
-        HideCursor();
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
-    private void HideCursor()
+    /// <summary>
+    /// ¸¶¿ì½º Ä¿¼­¸¦ ¼û±é´Ï´Ù.
+    /// </summary>
+    public void HideCursor()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
