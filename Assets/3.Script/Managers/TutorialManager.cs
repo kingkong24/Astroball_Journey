@@ -9,8 +9,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] PlayerMovement playerMovement;
 
     [Header("Targets")]
-    [SerializeField] GameObject[] GameObject_Targets;
-    [SerializeField] int targetCounter;
+    public GameObject[] GameObject_Targets;
+    public int targetCounter;
 
     private void Awake()
     {

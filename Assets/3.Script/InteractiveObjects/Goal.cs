@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SubGoal : MonoBehaviour
+public class Goal : MonoBehaviour
 {
     [Header("Manager")]
     [SerializeField] TutorialManager tutorialManager;
@@ -20,10 +20,8 @@ public class SubGoal : MonoBehaviour
 
             if (currentTarget == gameObject)
             {
-                tutorialManager.NextTarget();
-                gameObject.SetActive(false);
+                Debug.Log("∞‘¿” ≥°≥µ¥Ÿ");
             }
         }
     }
-
 }
