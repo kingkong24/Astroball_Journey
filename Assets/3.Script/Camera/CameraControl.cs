@@ -44,7 +44,6 @@ public class CameraControl : MonoBehaviour
     }
 
 
-    // 인풋시스템으로 옮겨줄 예정.
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -78,7 +77,7 @@ public class CameraControl : MonoBehaviour
         }
     }
 
-
+    #region 카메라 움직임
     /// <summary>
     /// 카메라의 위치를 초기화합니다.
     /// </summary>
@@ -117,4 +116,6 @@ public class CameraControl : MonoBehaviour
             yield return null;
         }
     }
+
+    #endregion
 }

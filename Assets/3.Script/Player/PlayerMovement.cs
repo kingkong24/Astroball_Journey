@@ -42,11 +42,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] bool isCharging = false;
     [SerializeField] bool isLaunch = false;
     [SerializeField] bool isArrowLarging = false;
+    [SerializeField] Vector3 SavePosition;
+    [SerializeField] Quaternion SaveRotation;
 
     [Space(0.2f)]
     [Header("이벤트")]
     public UnityEvent Event_Ready;
     public UnityEvent Event_shot;
+    public UnityEvent Event_Respawn;
 
     private void Awake()
     {
@@ -62,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         float horizon = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        if(isReady)
+        if (isReady)
         {
             // a키와 d키를 입력받아 왼쪽 또는 오른쪽으로 회전
             if (horizon != 0)
@@ -87,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         // 마우스 왼쪽 버튼을 떼었을 때
         if (Input.GetMouseButtonUp(0) && isCharging)
         {
+            SaveTransform();
             Shoot();
         }
 
@@ -161,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
     public void PlayerGetVertocal(float vertical)
     {
         float rotationX = Arrow.transform.rotation.eulerAngles.x;
-        if(rotationX > 180.0f)
+        if (rotationX > 180.0f)
         {
             rotationX -= 360.0f;
         }
@@ -170,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
         {
             vertical = 0;
         }
-        
+
         Arrow.transform.RotateAround(transform.position, -transform.right, vertical * rotationSpeed * Time.deltaTime);
     }
 
@@ -209,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator WaitPlayerReady()
     {
         yield return new WaitForSeconds(0.1f);
-        while(IsObjectSpeedBelowThreshold(rigidbody, threshold))
+        while (IsObjectSpeedBelowThreshold(rigidbody, threshold))
         {
             yield return null;
         }
@@ -226,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public void ScaleArrow()
     {
-        if(isArrowLarging)
+        if (isArrowLarging)
         {
             arrowScale = Arrow.transform.localScale.z + arrowScaleSpeed * Time.deltaTime;
             SetArrow(arrowScale);
@@ -306,6 +310,33 @@ public class PlayerMovement : MonoBehaviour
         return true;
     }
 
+    #endregion
+
+    #region 플레이어 리스폰
+    /// <summary>
+    /// 플레이어의 현재 위치와 회전을 저장합니다.
+    /// </summary>
+    private void SaveTransform()
+    {
+        SavePosition = transform.position;
+        SaveRotation = transform.rotation;
+    }
+
+    public void RespawnPlayer()
+    {
+        transform.position = SavePosition;
+        transform.rotation = SaveRotation;
+        ResetObjectVelocity(rigidbody);
+
+        Event_Respawn.Invoke();
+    }
+
+
+
+
+    #endregion
+
+    #region ETC
     /// <summary>
     /// 오브젝트의 속도를 0으로 초기화
     /// </summary>
@@ -318,6 +349,7 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.velocity = Vector3.zero;
         }
     }
+
 
     #endregion
 }
