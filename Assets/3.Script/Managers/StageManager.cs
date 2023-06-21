@@ -99,6 +99,7 @@ public class StageManager : MonoBehaviour
     public void NextTarget()
     {
         targetCounter += 1;
+        GameObject_Targets[targetCounter].SetActive(true);
         playerMovement.SetTarget(GameObject_Targets[targetCounter].transform);
     }
 

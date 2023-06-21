@@ -2260,6 +2260,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 272e9077ea3d4e841875b0c7af314ab8, type: 2}
+    - target: {fileID: 7452554376325412455, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7695342095644621645, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 60
@@ -2378,9 +2382,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4652476038365858193}
   - {fileID: 354415214}
   - {fileID: 1843385369}
-  - {fileID: 4652476038365858193}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
