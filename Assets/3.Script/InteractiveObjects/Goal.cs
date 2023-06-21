@@ -5,11 +5,11 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     [Header("Manager")]
-    [SerializeField] TutorialManager tutorialManager;
+    [SerializeField] StageManager tutorialManager;
 
     private void Awake()
     {
-        tutorialManager = FindObjectOfType<TutorialManager>();
+        tutorialManager = FindObjectOfType<StageManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +20,7 @@ public class Goal : MonoBehaviour
 
             if (currentTarget == gameObject)
             {
+                tutorialManager.Event_GameClear.Invoke();
                 Debug.Log("∞‘¿” ≥°≥µ¥Ÿ");
             }
         }

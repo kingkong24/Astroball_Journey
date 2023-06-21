@@ -30,6 +30,7 @@ public class CameraControl : MonoBehaviour
     [Space(0.2f)]
     [Header("È®ÀÎ¿ë")]
     [SerializeField] bool isFollow = false;
+    [SerializeField] bool isPlayerReady = true;
     [SerializeField] Vector3 offset;
 
     private void Awake()
@@ -45,11 +46,21 @@ public class CameraControl : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isPlayerReady)
         {
             CameraInitialise();
         }
 
+    }
+
+    public void ConfirmReady()
+    {
+        isPlayerReady = true;
+    }
+
+    public void ConfirmShoot()
+    {
+        isPlayerReady = false;
     }
 
     private void LateUpdate()

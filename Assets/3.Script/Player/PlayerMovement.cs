@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] bool isCharging = false;
     [SerializeField] bool isLaunch = false;
     [SerializeField] bool isArrowLarging = false;
+    [SerializeField] bool isGamePause = false;
+    [SerializeField] bool isGameClear = false;
     [SerializeField] Vector3 SavePosition;
     [SerializeField] Quaternion SaveRotation;
 
@@ -54,12 +56,16 @@ public class PlayerMovement : MonoBehaviour
     {
         FindPlanets();
         FindClosestPlanet();
+        Initialise();
         rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-
+        if (isGamePause || isGameClear)
+        {
+            return;
+        }
         float horizon = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -100,6 +106,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #region 초기화
+
+    /// <summary>
+    /// 각종 변수 초기화
+    /// </summary>
+    private void Initialise()
+    { 
+        isReady = true;        
+        isCharging = false;        
+        isLaunch = false;        
+        isArrowLarging = false;      
+        isGamePause = false;
+        isGameClear = false;
+    }
+
+     
     /// <summary>
     /// "Planet" 태그를 가진 모든 오브젝트의 Transform을 Transforms_planet에 저장합니다.
     /// </summary>
@@ -330,6 +351,31 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+
+
+    #endregion
+
+    #region 게임 진행 관련
+    /// <summary>
+    /// 게임을 일시정지합니다.
+    /// </summary>
+    public void GamePause()
+    {
+        isGamePause = true;
+    }
+
+    /// <summary>
+    /// 게임을 재개합니다.
+    /// </summary>
+    public void GameResume()
+    {
+        isGamePause = false;
+    }
+
+    public void GameClear()
+    {
+        isGameClear = true;
+    }
 
 
     #endregion
