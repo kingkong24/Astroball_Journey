@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("설정")]
     public float MaxPower = 2.0f;
     public float MinPower = 0.5f;
-    [SerializeField] float threshold = 0.1f;
+    [SerializeField] float thresholdSpeed = 0.01f;
+    [SerializeField] float waitTime = 0.5f;
 
     [Space(0.2f)]
     [Header("화살표 회전")]
@@ -111,16 +112,16 @@ public class PlayerMovement : MonoBehaviour
     /// 각종 변수 초기화
     /// </summary>
     private void Initialise()
-    { 
-        isReady = true;        
-        isCharging = false;        
-        isLaunch = false;        
-        isArrowLarging = false;      
+    {
+        isReady = true;
+        isCharging = false;
+        isLaunch = false;
+        isArrowLarging = false;
         isGamePause = false;
         isGameClear = false;
     }
 
-     
+
     /// <summary>
     /// "Planet" 태그를 가진 모든 오브젝트의 Transform을 Transforms_planet에 저장합니다.
     /// </summary>
@@ -232,15 +233,21 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator WaitPlayerReady()
     {
         yield return new WaitForSeconds(0.1f);
-        while (IsObjectSpeedBelowThreshold(rigidbody, threshold))
+        float timer = 0f;
+        while (timer < waitTime)
         {
-            yield return null;
+            while (IsObjectSpeedBelowThreshold(rigidbody, thresholdSpeed))
+            {
+                timer = 0f;
+                yield return null;
+            }
+            timer += Time.deltaTime;
         }
+
         PlayerInitialise();
         isLaunch = false;
         isReady = true;
         Arrow.SetActive(true);
-
         Event_Ready.Invoke();
     }
 
