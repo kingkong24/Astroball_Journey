@@ -6,6 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Volumes")]
+    public float MasterVolumes;
+    public float BGMVolumes;
+    public float SFXVolumes;
+
     private void Awake()
     {
         if (instance != null && instance != this)

@@ -5,24 +5,26 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     [Header("Manager")]
-    [SerializeField] StageManager tutorialManager;
+    [SerializeField] StageManager stageManager;
 
     private void Awake()
     {
-        tutorialManager = FindObjectOfType<StageManager>();
+        stageManager = FindObjectOfType<StageManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && tutorialManager.targetCounter < tutorialManager.GameObject_Targets.Length)
+        if (other.CompareTag("Player") && stageManager.targetCounter < stageManager.GameObject_Targets.Length)
         {
-            GameObject currentTarget = tutorialManager.GameObject_Targets[tutorialManager.targetCounter];
+            GameObject currentTarget = stageManager.GameObject_Targets[stageManager.targetCounter];
 
             if (currentTarget == gameObject)
             {
-                tutorialManager.Event_GameClear.Invoke();
+                stageManager.Event_GameClear.Invoke();
                 Debug.Log("°ÔÀÓ ³¡³µ´Ù");
             }
         }
     }
+
+
 }

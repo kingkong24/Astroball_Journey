@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct Sound
@@ -12,111 +10,91 @@ public struct Sound
 }
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance = null;
+    [Header("GameManager")]
+    [SerializeField] GameManager gameManager;
 
     [Header("BGM")]
-    [SerializeField]
-    private Sound[] bgmClips;
-    [SerializeField]
-    private float bgmVolume;
-    private AudioSource bgmPlayer;
+    [SerializeField] Sound[] bgmClips;
+    [SerializeField] float bgmVolume;
+    [SerializeField] AudioSource BGMplayer;
 
-    [Header("SFX")]
     [Space(30)]
-    [SerializeField]
-    private float sfxVolume;
-    [Tooltip("오디오 클립 추가하고 Define 스크립트에 enum 추가해야함")]
-    [SerializeField]
-    private AudioClip[] sfxClips;
-    // 카메라 위치(중앙)에서 재생할 효과음 (ex-플레이어 효과음)
-    private AudioSource sfxPlayer;
-
-    public float float_talkSound;
-
+    [Header("SFX")]
+    [SerializeField] float sfxVolume;
+    [SerializeField] Sound[] sfxClips;
+    [SerializeField] AudioSource SFXplayer;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            if (!Instance.Equals(this))
-            {
-                Destroy(gameObject);
-            }
-            return;
-        }
         Init();
-    }
-    private void OnEnable()
-    {
-        // 이벤트 구독
-        // UI~~.OnBgmVolumeSetting += SetBgmVolume;
-        // UI~~.OnSfxVolumeSetting += SetSfxVolume;
-    }
-    private void OnDisable()
-    {
-        // 이벤트 해제
-        // UI~~.OnBgmVolumeSetting -= SetBgmVolume;
-        // UI~~.OnSfxVolumeSetting -= SetSfxVolume;
     }
 
     private void Init()
     {
+        // GameManager
+        gameManager = FindObjectOfType<GameManager>();
+
         // BGM Player 생성 및 세팅
         GameObject bgm_obj = new GameObject("BgmPlayer");
         bgm_obj.transform.parent = transform;
-        bgmPlayer = bgm_obj.AddComponent<AudioSource>();
-        bgmPlayer.playOnAwake = false;
-        bgmPlayer.loop = true;
-        SetBgmVolume();
+        BGMplayer = bgm_obj.AddComponent<AudioSource>();
+        BGMplayer.playOnAwake = false;
+        BGMplayer.loop = true;
+        SetBgmVolume(gameManager.MasterVolumes * gameManager.BGMVolumes);
 
         // SFX Player 생성 및 세팅
         GameObject sfx_obj = new GameObject("SfxPlayer");
         sfx_obj.transform.parent = transform;
-        sfxPlayer = sfx_obj.AddComponent<AudioSource>();
-        sfxPlayer.playOnAwake = false;
-        SetSfxVolume();
+        SFXplayer = sfx_obj.AddComponent<AudioSource>();
+        SFXplayer.playOnAwake = false;
+        SetSFXVolume(gameManager.SFXVolumes * gameManager.BGMVolumes);
     }
 
-    public void PlayBgm(string name)
+    public void PlayBGM(string name)
     {
         // 이미 재생중인 BGM이 있으면 멈춤
-        StopBgm();
+        StopBGM();
 
         // 이름 일치하는 BGM 찾아서 재생
         foreach (Sound s in bgmClips)
         {
             if (s.name.Equals(name))
             {
-                bgmPlayer.clip = s.clip;
-                bgmPlayer.Play();
+                BGMplayer.clip = s.clip;
+                BGMplayer.Play();
                 break;
             }
         }
     }
-    public void StopBgm()
+    public void StopBGM()
     {
-        if (bgmPlayer.isPlaying)
+        if (BGMplayer.isPlaying)
         {
-            bgmPlayer.Stop();
+            BGMplayer.Stop();
         }
     }
 
-    public void SetBgmVolume(float volume = 1.0f)
+    void SetBgmVolume(float volume = 1.0f)
     {
-        bgmPlayer.volume = volume;
+        SFXplayer.volume = volume;
     }
 
-    public void PlaySfx<T>(T sfx) where T : Enum
+    public void PlaySFX(string name)
     {
-        sfxPlayer.PlayOneShot(sfxClips[Convert.ToInt32(sfx)]);
+        // 이름 일치하는 SFX 찾아서 재생
+        foreach (Sound s in bgmClips)
+        {
+            if (s.name.Equals(name))
+            {
+                SFXplayer.clip = s.clip;
+                SFXplayer.Play();
+                break;
+            }
+        }
     }
-    public void SetSfxVolume(float volume = 1.0f)
+
+    void SetSFXVolume(float volume = 1.0f)
     {
-        sfxPlayer.volume = volume;
+        SFXplayer.volume = volume;
     }
 }

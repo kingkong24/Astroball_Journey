@@ -707,14 +707,6 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7061985031639731104, guid: 47e93f3f6947d7442a74f0a872ee7fe4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061985031639731104, guid: 47e93f3f6947d7442a74f0a872ee7fe4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061985031639731104, guid: 47e93f3f6947d7442a74f0a872ee7fe4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1058,18 +1050,6 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4653464706456208684, guid: 958a5a9d207362a4197d3e09a185a417, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4653464706456208684, guid: 958a5a9d207362a4197d3e09a185a417, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4653464706456208684, guid: 958a5a9d207362a4197d3e09a185a417, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4653464706456208684, guid: 958a5a9d207362a4197d3e09a185a417, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1113,8 +1093,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball_Golf
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6736123071436333745, guid: 958a5a9d207362a4197d3e09a185a417, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2932,10 +2911,6 @@ PrefabInstance:
       propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 620693791}
-    - target: {fileID: 3999172038520696420, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6147699713117311534, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
       propertyPath: m_Name
       value: SubGoal
