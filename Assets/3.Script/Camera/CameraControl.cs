@@ -53,16 +53,6 @@ public class CameraControl : MonoBehaviour
 
     }
 
-    public void ConfirmReady()
-    {
-        isPlayerReady = true;
-    }
-
-    public void ConfirmShoot()
-    {
-        isPlayerReady = false;
-    }
-
     private void LateUpdate()
     {
         if (!isFollow)
@@ -87,6 +77,25 @@ public class CameraControl : MonoBehaviour
         }
     }
 
+    #region 상태
+    /// <summary>
+    /// Ready 상태를 확인합니다.
+    /// </summary>
+    public void ConfirmReady()
+    {
+        isPlayerReady = true;
+    }
+
+    /// <summary>
+    /// !Ready 상태를 확인합니다.
+    /// </summary>
+    public void ConfirmShoot()
+    {
+        isPlayerReady = false;
+    }
+    #endregion
+
+
     #region 카메라 움직임
     /// <summary>
     /// 카메라의 위치를 초기화합니다.
@@ -95,7 +104,7 @@ public class CameraControl : MonoBehaviour
     {
         isFollow = false;
 
-        Vector3 directionUpNormal = (GameObject_player.transform.position - playerMovement.Transform_closestPlaent.position).normalized;
+        Vector3 directionUpNormal = (GameObject_player.transform.position - playerMovement.Transform_closestPlaent.position).normalized;    
 
         Vector3 directionSide = (GameObject_player.transform.position - playerMovement.Transform_target.position);
 

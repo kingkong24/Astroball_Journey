@@ -56,6 +56,9 @@ public class StageManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 초기화합니다.
+    /// </summary>
     private void Initialise()
     {
         isGameStart = false;
@@ -103,11 +106,17 @@ public class StageManager : MonoBehaviour
         playerMovement.SetTarget(GameObject_Targets[targetCounter].transform);
     }
 
+    /// <summary>
+    /// Ready 상태를 확인합니다.
+    /// </summary>
     public void ConfirmReady()
     {
         isPlayerReady = true;
     }
 
+    /// <summary>
+    /// !Ready 상태를 확인합니다.
+    /// </summary>
     public void ConfirmShoot()
     {
         isPlayerReady = false;

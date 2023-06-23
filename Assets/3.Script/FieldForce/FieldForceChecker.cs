@@ -23,6 +23,9 @@ public class FieldForceChecker : MonoBehaviour
         Recalculate();
     }
 
+    /// <summary>
+    /// LinearForceField들의 힘을 재계산하여 나타냅니다.
+    /// </summary>
     public void Recalculate()
     {
         Vector3 totalForce = Vector3.zero;
@@ -47,7 +50,7 @@ public class FieldForceChecker : MonoBehaviour
             Arrow.transform.rotation = Quaternion.LookRotation(totalForce);
             float zScale = Mathf.Min(totalForce.magnitude, MaxZScale);
             float normalizedScale = zScale / MaxZScale;
-            Vector3 newScale = new Vector3(normalizedScale, normalizedScale, zScale);
+            Vector3 newScale = new(normalizedScale, normalizedScale, zScale);
             Arrow.transform.localScale = newScale;
         }
     }

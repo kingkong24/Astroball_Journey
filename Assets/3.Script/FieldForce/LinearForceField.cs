@@ -15,12 +15,11 @@ public class LinearForceField : MonoBehaviour
     [Header("확인용")]
     [SerializeField] FieldForceChecker fieldForceChecker;
     [SerializeField] Rigidbody Rigidbody_player;
-    [SerializeField] Collider collider;
+    [SerializeField] new Collider collider;
     [SerializeField] int EffectNum;
     [SerializeField] int effectCounter;
     [SerializeField] float activationTimer;
     public bool isPlayerOn;
-
 
     private void Awake()
     {
@@ -30,7 +29,7 @@ public class LinearForceField : MonoBehaviour
         isPlayerOn = false;
         collider = GetComponent<Collider>();
         fieldForceChecker = FindObjectOfType<FieldForceChecker>();
-        Rigidbody_player = FindObjectOfType<Rigidbody>();
+        Rigidbody_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -62,6 +61,9 @@ public class LinearForceField : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// gameObjects_effect를 ForceField의 상황에 맞게 생성합니다.
+    /// </summary>
     private void EffectActive()
     {
         activationTimer += Time.deltaTime;
@@ -86,6 +88,10 @@ public class LinearForceField : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Collider안의 Position을 반환합니다.
+    /// </summary>
+    /// <returns></returns>
     private Vector3 GetRandomPosition()
     {
         Vector3 minPoint = transform.position - collider.bounds.size * 0.5f;

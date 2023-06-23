@@ -67,6 +67,12 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
+        
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            ResetPlayer();
+        }
+
         float horizon = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -119,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
         isArrowLarging = false;
         isGamePause = false;
         isGameClear = false;
+        SaveTransform();
     }
 
 
@@ -348,10 +355,12 @@ public class PlayerMovement : MonoBehaviour
         SaveRotation = transform.rotation;
     }
 
-    public void RespawnPlayer()
+    /// <summary>
+    /// player를 이전 위치로 reset합니다.
+    /// </summary>
+    public void ResetPlayer()
     {
-        transform.position = SavePosition;
-        transform.rotation = SaveRotation;
+        transform.SetPositionAndRotation(SavePosition, SaveRotation);
         ResetObjectVelocity(rigidbody);
 
         Event_Respawn.Invoke();

@@ -10,14 +10,13 @@ public class GravityField : MonoBehaviour
     [Header("È®ÀÎ¿ë")]
     [SerializeField] Transform Transform_player;
     [SerializeField] Rigidbody Rigidbody_player;
-    [SerializeField] FieldForceChecker fieldForceChecker;
     [SerializeField] bool isPlayerOn;
 
     private void Awake()
     {
         isPlayerOn = false;
-        Rigidbody_player = FindObjectOfType<Rigidbody>();
-        fieldForceChecker = FindObjectOfType<FieldForceChecker>();
+        Transform_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Rigidbody_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -26,7 +25,7 @@ public class GravityField : MonoBehaviour
         {
             Vector3 direction = transform.position - Transform_player.position;
             float distance = direction.magnitude;
-            Vector3 force = direction.normalized * gracityForceAmount / (distance * distance);
+            Vector3 force = direction.normalized * gracityForceAmount;
             Rigidbody_player.AddForce(force, ForceMode.Force);
         }
     }
@@ -36,7 +35,6 @@ public class GravityField : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerOn = true;
-            fieldForceChecker.Recalculate();
         }
     }
 
@@ -45,7 +43,6 @@ public class GravityField : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerOn = false;
-            fieldForceChecker.Recalculate();
         }
     }
 }

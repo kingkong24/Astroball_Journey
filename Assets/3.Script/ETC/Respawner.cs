@@ -11,7 +11,7 @@ public class Respawner : MonoBehaviour
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
             if (playerMovement != null)
             {
-                playerMovement.RespawnPlayer();
+                playerMovement.ResetPlayer();
             }
         }
     }
