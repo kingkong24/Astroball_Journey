@@ -37,26 +37,16 @@ public class AudioManager : MonoBehaviour
         // GameManager
         gameManager = FindObjectOfType<GameManager>();
 
-        // BGM Player 생성 및 세팅
-        GameObject bgm_obj = GetBgm_obj();
-        bgm_obj.transform.parent = transform;
-        BGMplayer = bgm_obj.AddComponent<AudioSource>();
+        // BGM Player  세팅
         BGMplayer.playOnAwake = false;
         BGMplayer.loop = true;
         SetBgmVolume(gameManager.MasterVolumes * gameManager.BGMVolumes);
 
-        // SFX Player 생성 및 세팅
-        GameObject sfx_obj = new("SfxPlayer");
-        sfx_obj.transform.parent = transform;
-        SFXplayer = sfx_obj.AddComponent<AudioSource>();
+        // SFX Player  세팅
         SFXplayer.playOnAwake = false;
         SetSFXVolume(gameManager.SFXVolumes * gameManager.BGMVolumes);
     }
 
-    private static GameObject GetBgm_obj()
-    {
-        return new GameObject("BgmPlayer");
-    }
 
     /// <summary>
     /// BGM을 재생합니다.
@@ -94,7 +84,7 @@ public class AudioManager : MonoBehaviour
     /// BGM Volume을 설정합니다.
     /// </summary>
     /// <param name="volume"></param>
-    void SetBgmVolume(float volume = 1.0f)
+    public void SetBgmVolume(float volume = 1.0f)
     {
         SFXplayer.volume = volume;
     }
@@ -116,12 +106,12 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
-    
+
     /// <summary>
     /// 효과음을 설정합니다.
     /// </summary>
     /// <param name="volume"></param>
-    void SetSFXVolume(float volume = 1.0f)
+    public void SetSFXVolume(float volume = 1.0f)
     {
         SFXplayer.volume = volume;
     }

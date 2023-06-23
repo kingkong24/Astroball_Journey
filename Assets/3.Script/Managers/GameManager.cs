@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("Volumes")]
-    public float MasterVolumes;
-    public float BGMVolumes;
-    public float SFXVolumes;
+    public float MasterVolumes = 1;
+    public float BGMVolumes = 1;
+    public float SFXVolumes = 1;
 
     private void Awake()
     {
