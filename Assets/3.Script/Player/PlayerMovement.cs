@@ -377,8 +377,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void SaveTransform()
     {
-        SavePosition = transform.position;
-        SaveRotation = transform.rotation;
+        SavePosition = gameobject_ball.transform.position;
+        SaveRotation = gameobject_ball.transform.rotation;
     }
 
     /// <summary>
@@ -386,7 +386,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public void ResetPlayer()
     {
-        transform.SetPositionAndRotation(SavePosition, SaveRotation);
+        gameobject_ball.transform.SetPositionAndRotation(SavePosition, SaveRotation);
         ResetObjectVelocity(rigidbody_ball);
 
         Event_Respawn.Invoke();
@@ -431,8 +431,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (rigidbody != null)
         {
-            rigidbody.angularVelocity = Vector3.zero;
-            rigidbody.velocity = Vector3.zero;
+            rigidbody.isKinematic = true;
+            rigidbody.isKinematic = false;
         }
     }
 
