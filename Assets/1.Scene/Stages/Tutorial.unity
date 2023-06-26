@@ -611,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ae4cc9b3211b641aaa5b008a9fdb97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   MasterVolumes: 0
   BGMVolumes: 0
   SFXVolumes: 0
@@ -2359,7 +2360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameObject_player: {fileID: 0}
-  playerMovement: {fileID: 0}
   Transform_Firsttarget: {fileID: 0}
   Transform_target: {fileID: 0}
   Transforms_planet: []
