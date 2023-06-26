@@ -6,10 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Managers")]
+    [SerializeField] AudioManager audioManager;
+
     [Header("Volumes")]
     public float MasterVolumes = 0.6f;
     public float BGMVolumes = 0.6f;
     public float SFXVolumes = 0.6f;
+
+
 
     private void Awake()
     {
@@ -22,6 +27,8 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     /// <summary>
@@ -40,15 +47,13 @@ public class GameManager : MonoBehaviour
     public void SetMasterVolums(float value)
     {
         MasterVolumes = value;
-        Debug.Log("Master : " + value);
-        AudioManager audioManager = FindObjectOfType<AudioManager>();
-        if(audioManager != null)
-        {
-            audioManager.SetBgmVolume();
-            audioManager.SetSFXVolume();
-        }
-    }    
-    
+        audioManager = FindObjectOfType<AudioManager>();
+
+        audioManager.SetBgmVolume(MasterVolumes * BGMVolumes);
+        audioManager.SetSFXVolume(MasterVolumes * SFXVolumes);
+        audioManager.PlaySFX("SFX_TestClip");
+    }
+
     /// <summary>
     /// BGM Volume을 설정합니다.
     /// </summary>
@@ -56,14 +61,12 @@ public class GameManager : MonoBehaviour
     public void SetBGMVolums(float value)
     {
         BGMVolumes = value;
-        Debug.Log("BGM : " + value);
-        AudioManager audioManager = FindObjectOfType<AudioManager>();
-        if(audioManager != null)
-        {
-            audioManager.SetBgmVolume();
-        }
-    }    
-    
+        audioManager = FindObjectOfType<AudioManager>();
+
+        audioManager.bgmVolume = BGMVolumes * MasterVolumes;
+        audioManager.SetBgmVolume(audioManager.bgmVolume);
+    }
+
     /// <summary>
     /// SFX Volume을 설정합니다.
     /// </summary>
@@ -71,11 +74,10 @@ public class GameManager : MonoBehaviour
     public void SetSFXVolums(float value)
     {
         SFXVolumes = value;
-        Debug.Log("SFX : " + value);
-        AudioManager audioManager = FindObjectOfType<AudioManager>();
-        if(audioManager != null)
-        {
-            audioManager.SetSFXVolume();
-        }
+        audioManager = FindObjectOfType<AudioManager>();
+
+        audioManager.bgmVolume = SFXVolumes * MasterVolumes;
+        audioManager.SetSFXVolume(audioManager.bgmVolume);
+        audioManager.PlaySFX("SFX_TestClip");
     }
 }

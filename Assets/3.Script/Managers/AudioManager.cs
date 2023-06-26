@@ -15,18 +15,23 @@ public class AudioManager : MonoBehaviour
 
     [Header("BGM")]
     [SerializeField] Sound[] bgmClips;
-    [SerializeField] float bgmVolume;
+    public float bgmVolume;
     [SerializeField] AudioSource BGMplayer;
 
     [Space(30)]
     [Header("SFX")]
     [SerializeField] float sfxVolume;
-    [SerializeField] Sound[] sfxClips;
+    public Sound[] sfxClips;
     [SerializeField] AudioSource SFXplayer;
 
     private void Awake()
     {
         Init();
+    }
+
+    private void Start()
+    {
+        PlayBGM("BGM_Test");
     }
 
     /// <summary>
@@ -84,9 +89,9 @@ public class AudioManager : MonoBehaviour
     /// BGM Volume을 설정합니다.
     /// </summary>
     /// <param name="volume"></param>
-    public void SetBgmVolume(float volume = 1.0f)
+    public void SetBgmVolume(float volume)
     {
-        SFXplayer.volume = volume;
+        BGMplayer.volume = volume;
     }
 
     /// <summary>
@@ -96,7 +101,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(string name)
     {
         // 이름 일치하는 SFX 찾아서 재생
-        foreach (Sound s in bgmClips)
+        foreach (Sound s in sfxClips)
         {
             if (s.name.Equals(name))
             {
@@ -111,8 +116,9 @@ public class AudioManager : MonoBehaviour
     /// 효과음을 설정합니다.
     /// </summary>
     /// <param name="volume"></param>
-    public void SetSFXVolume(float volume = 1.0f)
+    public void SetSFXVolume(float volume)
     {
+        Debug.Log("audioManager" + volume);
         SFXplayer.volume = volume;
     }
 }

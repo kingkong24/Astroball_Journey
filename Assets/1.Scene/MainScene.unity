@@ -4502,11 +4502,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  bgmClips: []
-  bgmVolume: 0
+  bgmClips:
+  - name: BGM_Test
+    clip: {fileID: 8300000, guid: 03d050228011a86469edbd6473f04604, type: 3}
+  bgmVolume: 0.6
   BGMplayer: {fileID: 1760562116}
-  sfxVolume: 0
-  sfxClips: []
+  sfxVolume: 0.6
+  sfxClips:
+  - name: SFX_TestClip
+    clip: {fileID: 8300000, guid: 4c60f4fe6840d7f4fa604cd7b60469c4, type: 3}
   SFXplayer: {fileID: 908094562}
 --- !u!4 &565453336
 Transform:
