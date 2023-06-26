@@ -10,7 +10,7 @@ public class GoalDistanceUI : MonoBehaviour
     [SerializeField] TMP_Text distanceText;
 
     [Header("camera")]
-    [SerializeField] Camera camera;
+    [SerializeField] new Camera camera;
 
     [Header("¼³Á¤")]
     [SerializeField] float minSize = 0.0002f;

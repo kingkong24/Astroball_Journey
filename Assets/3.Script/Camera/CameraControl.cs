@@ -6,7 +6,6 @@ public class CameraControl : MonoBehaviour
 {
     [Header("'Player' 태그가 붙은 오브젝트를 찾습니다.")]
     [SerializeField] GameObject GameObject_player;
-    [SerializeField] PlayerMovement playerMovement;
 
     [Space(0.2f)]
     [Header("Target")]
@@ -36,7 +35,6 @@ public class CameraControl : MonoBehaviour
     private void Awake()
     {
         GameObject_player = GameObject.FindGameObjectWithTag("Player");
-        playerMovement = GameObject_player.GetComponent<PlayerMovement>();
     }
 
     private void Start()
@@ -112,9 +110,7 @@ public class CameraControl : MonoBehaviour
 
         Vector3 cameraPosition = playerPosition + (playerUpDirection * cameraDistanceAgainstPlaent) + (playerBackwardDirection * cameraDistanceAgainstTarget);
 
-        transform.position = cameraPosition;
-
-        transform.rotation = GameObject_player.transform.rotation;
+        transform.SetPositionAndRotation(cameraPosition, GameObject_player.transform.rotation);
     }
 
     /// <summary>
