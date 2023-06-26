@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainUI : MonoBehaviour
 {
@@ -14,8 +15,6 @@ public class MainUI : MonoBehaviour
 
     [Header("È®ÀÎ¿ë")]
     [SerializeField] Vector3 targetPosition;
-    [SerializeField] bool isContentOn;
-
 
     private void Awake()
     {
@@ -30,7 +29,7 @@ public class MainUI : MonoBehaviour
     public void UIOn(GameObject gameObjects_On)
     {
         RectTransform rectTransform = gameObjects_On.GetComponent<RectTransform>();
-        targetPosition = rectTransform.position + new Vector3(0, canvasScaler.referenceResolution.y, 0);
+        targetPosition = rectTransform.position + new Vector3(0, canvasScaler.referenceResolution.y * rectTransform.localScale.y, 0);
         StartCoroutine(MoveObject(rectTransform, targetPosition, true));
     }
 
@@ -41,7 +40,7 @@ public class MainUI : MonoBehaviour
     public void UIOff(GameObject gameObjects_Off)
     {
         RectTransform rectTransform = gameObjects_Off.GetComponent<RectTransform>();
-        targetPosition = rectTransform.position - new Vector3(0, canvasScaler.referenceResolution.y, 0);
+        targetPosition = rectTransform.position - new Vector3(0, canvasScaler.referenceResolution.y * rectTransform.localScale.y, 0);
         StartCoroutine(MoveObject(rectTransform, targetPosition, false));
     }
 
@@ -131,5 +130,10 @@ public class MainUI : MonoBehaviour
     public void ProgramQuit()
     {
         Application.Quit();
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

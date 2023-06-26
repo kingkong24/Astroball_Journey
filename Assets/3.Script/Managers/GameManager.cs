@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("Volumes")]
-    public float MasterVolumes = 1;
-    public float BGMVolumes = 1;
-    public float SFXVolumes = 1;
+    public float MasterVolumes = 0.6f;
+    public float BGMVolumes = 0.6f;
+    public float SFXVolumes = 0.6f;
 
     private void Awake()
     {
@@ -31,5 +31,51 @@ public class GameManager : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    /// <summary>
+    /// MasterVolum을 설정합니다.
+    /// </summary>
+    /// <param name="value"></param>
+    public void SetMasterVolums(float value)
+    {
+        MasterVolumes = value;
+        Debug.Log("Master : " + value);
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        if(audioManager != null)
+        {
+            audioManager.SetBgmVolume();
+            audioManager.SetSFXVolume();
+        }
+    }    
+    
+    /// <summary>
+    /// BGM Volume을 설정합니다.
+    /// </summary>
+    /// <param name="value"></param>
+    public void SetBGMVolums(float value)
+    {
+        BGMVolumes = value;
+        Debug.Log("BGM : " + value);
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        if(audioManager != null)
+        {
+            audioManager.SetBgmVolume();
+        }
+    }    
+    
+    /// <summary>
+    /// SFX Volume을 설정합니다.
+    /// </summary>
+    /// <param name="value"></param>
+    public void SetSFXVolums(float value)
+    {
+        SFXVolumes = value;
+        Debug.Log("SFX : " + value);
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        if(audioManager != null)
+        {
+            audioManager.SetSFXVolume();
+        }
     }
 }

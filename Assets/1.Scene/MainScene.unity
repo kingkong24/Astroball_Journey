@@ -1806,7 +1806,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 235383933}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1660423469719103}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1628714231}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActivetrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1248868811}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1354242258}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &235383933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2757,7 +2805,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 224118430404357644}
+        m_TargetAssemblyTypeName: TranslateUI, Assembly-CSharp
+        m_MethodName: Translate_Spanish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &329120873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3308,7 +3368,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 387032575}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1660423469719103}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1628714231}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1248868811}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActivetrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1354242258}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &387032575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3461,7 +3569,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3824,7 +3932,7 @@ GameObject:
   - component: {fileID: 485054843}
   - component: {fileID: 485054844}
   m_Layer: 5
-  m_Name: Slider_Master
+  m_Name: Slider_SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3900,10 +4008,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.2
+  m_Value: 0.6
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1070794683}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SetSFXVolums
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &487328140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,8 +4186,8 @@ RectTransform:
   m_Father: {fileID: 1211347441}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMin: {x: 0.6, y: 0}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 15, y: -5}
   m_Pivot: {x: 0.5, y: 1}
@@ -9814,10 +9934,10 @@ MonoBehaviour:
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
-  m_Elasticity: 10
+  m_Elasticity: 5
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 24465598}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1446191156}
@@ -10132,7 +10252,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 224118430404357644}
+        m_TargetAssemblyTypeName: TranslateUI, Assembly-CSharp
+        m_MethodName: Translate_English
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &719157354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10332,8 +10464,8 @@ RectTransform:
   - {fileID: 1090544980}
   - {fileID: 1040926151}
   - {fileID: 1449481818}
-  - {fileID: 387032572}
   - {fileID: 235383930}
+  - {fileID: 387032572}
   m_Father: {fileID: 1538894956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11743,7 +11875,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12332,7 +12464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 224118430404357644}
+        m_TargetAssemblyTypeName: TranslateUI, Assembly-CSharp
+        m_MethodName: Translate_Chinese
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1034223762
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12527,7 +12671,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1040926154}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActivetrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1660423469719103}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1628714231}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1248868811}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1354242258}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1040926154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12905,9 +13097,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ae4cc9b3211b641aaa5b008a9fdb97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MasterVolumes: 0
-  BGMVolumes: 0
-  SFXVolumes: 0
+  MasterVolumes: 0.6
+  BGMVolumes: 0.6
+  SFXVolumes: 0.6
 --- !u!4 &1070794684
 Transform:
   m_ObjectHideFlags: 0
@@ -14527,8 +14719,8 @@ RectTransform:
   m_Father: {fileID: 1185781392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMin: {x: 0.6, y: 0}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 15, y: -5}
   m_Pivot: {x: 0.5, y: 1}
@@ -15606,7 +15798,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 487328141}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1114098387}
@@ -16358,7 +16550,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1449481821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1660423469719103}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActivetrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1628714231}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1248868811}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1661917737}
+        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+        m_MethodName: UIActiveFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1354242258}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1449481821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17447,6 +17687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1647636222}
+  - component: {fileID: 1647636223}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -17476,6 +17717,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1647636223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647636221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe99f29e0ad264d8854c18d26ee28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 114032694002514813}
+  fullscreenToggle: {fileID: 114924678068413992}
+  isFullScreen: 1
 --- !u!1 &1661577846
 GameObject:
   m_ObjectHideFlags: 0
@@ -17675,7 +17931,6 @@ MonoBehaviour:
   audioManager: {fileID: 0}
   canvasScaler: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
-  isContentOn: 0
 --- !u!1 &1727720577
 GameObject:
   m_ObjectHideFlags: 0
@@ -23283,7 +23538,7 @@ GameObject:
   - component: {fileID: 1893899659}
   - component: {fileID: 1893899660}
   m_Layer: 5
-  m_Name: Slider_Master
+  m_Name: Slider_BGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23359,10 +23614,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.2
+  m_Value: 0.6
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1070794683}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SetBGMVolums
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1898191785
 GameObject:
   m_ObjectHideFlags: 0
@@ -23665,7 +23932,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 79649424}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1203609309}
@@ -24667,6 +24934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224118430404357643}
+  - component: {fileID: 224118430404357644}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -25060,7 +25328,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1647636223}
+        m_TargetAssemblyTypeName: ResolutionUI, Assembly-CSharp
+        m_MethodName: SetResolution
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &114087174626570023
 MonoBehaviour:
@@ -25456,10 +25736,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.2
+  m_Value: 0.6
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1070794683}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SetMasterVolums
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &114440368849677753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25935,7 +26227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 224118430404357644}
+        m_TargetAssemblyTypeName: TranslateUI, Assembly-CSharp
+        m_MethodName: Translate_Korean
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &114819915018507659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26042,8 +26346,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 0
+      m_Calls:
+      - m_Target: {fileID: 1647636223}
+        m_TargetAssemblyTypeName: ResolutionUI, Assembly-CSharp
+        m_MethodName: ToggleFullscreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 1
 --- !u!114 &114925496339524583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26161,7 +26477,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 224414471291072101}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 114001401012817583}
@@ -26466,7 +26782,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26636,6 +26952,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &224118430404357644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757947457744833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f508c86e32ef0549b2745eba421f1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text_setting: {fileID: 1423026566}
+  text_menu: {fileID: 1090544981}
+  text_Language: {fileID: 323851277}
+  text_resolution: {fileID: 346291777}
+  text_sound: {fileID: 930191945}
+  text_credits: {fileID: 330529870}
+  text_Language2: {fileID: 114634100151669049}
 --- !u!224 &224185165881986060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26694,8 +27029,8 @@ RectTransform:
   m_Father: {fileID: 224416039879915909}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMin: {x: 0.6, y: 0}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 15, y: -5}
   m_Pivot: {x: 0.5, y: 1}

@@ -44,11 +44,10 @@ public class CameraControl : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isPlayerReady)
+        if (Input.GetKey(KeyCode.Space) && isPlayerReady)
         {
             CameraInitialise();
         }
-
     }
 
     private void LateUpdate()
