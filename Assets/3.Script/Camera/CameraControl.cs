@@ -104,17 +104,17 @@ public class CameraControl : MonoBehaviour
     {
         isFollow = false;
 
-        Vector3 directionUpNormal = (GameObject_player.transform.position - playerMovement.Transform_closestPlaent.position).normalized;    
+        Vector3 playerPosition = GameObject_player.transform.position;
 
-        Vector3 directionSide = (GameObject_player.transform.position - playerMovement.Transform_target.position);
+        Vector3 playerUpDirection = GameObject_player.transform.up;
 
-        Vector3 projectedVector = (directionSide - Vector3.Project(directionSide, directionUpNormal)).normalized;
+        Vector3 playerBackwardDirection = -GameObject_player.transform.forward;
 
-        Vector3 resultPosition = GameObject_player.transform.position + directionUpNormal * cameraDistanceAgainstPlaent + projectedVector * cameraDistanceAgainstTarget;
+        Vector3 cameraPosition = playerPosition + (playerUpDirection * cameraDistanceAgainstPlaent) + (playerBackwardDirection * cameraDistanceAgainstTarget);
 
-        transform.position = resultPosition;
+        transform.position = cameraPosition;
 
-        transform.LookAt(GameObject_player.transform.position + cameraLookUp * directionUpNormal);
+        transform.rotation = GameObject_player.transform.rotation;
     }
 
     /// <summary>

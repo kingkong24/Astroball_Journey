@@ -14,7 +14,7 @@ public class LinearForceField : MonoBehaviour
 
     [Header("È®ÀÎ¿ë")]
     [SerializeField] FieldForceChecker fieldForceChecker;
-    [SerializeField] Rigidbody Rigidbody_player;
+    [SerializeField] Rigidbody Rigidbody_ball;
     [SerializeField] new Collider collider;
     [SerializeField] int EffectNum;
     [SerializeField] int effectCounter;
@@ -29,23 +29,23 @@ public class LinearForceField : MonoBehaviour
         isPlayerOn = false;
         collider = GetComponent<Collider>();
         fieldForceChecker = FindObjectOfType<FieldForceChecker>();
-        Rigidbody_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
+        Rigidbody_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
         EffectActive();
 
-        if (isPlayerOn && Rigidbody_player != null)
+        if (isPlayerOn && Rigidbody_ball != null)
         {
             Vector3 force = forceDirection.normalized * forceAmount;
-            Rigidbody_player.AddForce(force, ForceMode.Force);
+            Rigidbody_ball.AddForce(force, ForceMode.Force);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Ball"))
         {
             isPlayerOn = true;
             fieldForceChecker.Recalculate();
@@ -54,7 +54,7 @@ public class LinearForceField : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Ball"))
         {
             isPlayerOn = false;
             fieldForceChecker.Recalculate();

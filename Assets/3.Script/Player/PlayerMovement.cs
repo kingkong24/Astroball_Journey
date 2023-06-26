@@ -5,50 +5,53 @@ using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("ÇÃ·¹ÀÌ¾î")]
-    [SerializeField] GameObject Ball;
-    [SerializeField] GameObject Arrow;
+    [Header("í”Œë ˆì´ì–´ ì˜¤ë¸Œì íŠ¸")]
+    [SerializeField] GameObject gameobject_ball;
+    [SerializeField] GameObject gameobject_arrow;
 
-    [Space(0.2f)]
+    [Space(2f)]
     [Header("Target")]
     public Transform Transform_target;
 
-    [Space(0.2f)]
+    [Space(2f)]
     [Header("Planet")]
     [SerializeField] Transform[] Transforms_planet;
     public Transform Transform_closestPlaent;
 
-    [Space(0.2f)]
-    [Header("¼³Á¤")]
+    [Space(2f)]
+    [Header("ì„¤ì •")]
     public float MaxPower = 2.0f;
     public float MinPower = 0.5f;
     [SerializeField] float thresholdSpeed = 0.01f;
     [SerializeField] float waitTime = 0.5f;
 
-    [Space(0.2f)]
-    [Header("È­»ìÇ¥ È¸Àü")]
-    [SerializeField] float rotationSpeed = 90.0f;
+    [Space(2f)]
+    [Header("í™”ì‚´í‘œ íšŒì „")]
+    [SerializeField] float rotationSpeedUpDown = 90.0f;
+    [SerializeField] float minRotationSpeedLeftRight = 90.0f;
+    [SerializeField] float maxRotationSpeedLeftRight = 360.0f;
 
-    [Space(0.2f)]
-    [Header("¹ß»ç ¼³Á¤")]
+    [Space(2f)]
+    [Header("ë°œì‚¬ ì„¤ì •")]
     [SerializeField] float arrowScaleSpeed = 1.0f;
     [SerializeField] float ArrowScaleForceRatio = 10.0f;
 
-    [Space(0.2f)]
-    [Header("È®ÀÎ¿ë")]
-    [SerializeField] new Rigidbody rigidbody;
+    [Space(2f)]
+    [Header("í™•ì¸ìš©")]
+    [SerializeField] Rigidbody rigidbody_ball;
+    [SerializeField] Quaternion SaveRotation;
+    [SerializeField] Vector3 SavePosition;
     [SerializeField] float arrowScale;
+    [Space(5f)]
     [SerializeField] bool isReady = true;
     [SerializeField] bool isCharging = false;
     [SerializeField] bool isLaunch = false;
     [SerializeField] bool isArrowLarging = false;
     [SerializeField] bool isGamePause = false;
     [SerializeField] bool isGameClear = false;
-    [SerializeField] Vector3 SavePosition;
-    [SerializeField] Quaternion SaveRotation;
 
-    [Space(0.2f)]
-    [Header("ÀÌº¥Æ®")]
+    [Space(2f)]
+    [Header("ì´ë²¤íŠ¸")] 
     public UnityEvent Event_Ready;
     public UnityEvent Event_shot;
     public UnityEvent Event_Respawn;
@@ -58,11 +61,13 @@ public class PlayerMovement : MonoBehaviour
         FindPlanets();
         FindClosestPlanet();
         Initialise();
-        rigidbody = GetComponent<Rigidbody>();
+        rigidbody_ball = gameobject_ball.GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
+        FollowBall();
+
         if (isGamePause || isGameClear)
         {
             return;
@@ -73,49 +78,55 @@ public class PlayerMovement : MonoBehaviour
             ResetPlayer();
         }
 
-        float horizon = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
         if (isReady)
         {
-            // aÅ°¿Í dÅ°¸¦ ÀÔ·Â¹Ş¾Æ ¿ŞÂÊ ¶Ç´Â ¿À¸¥ÂÊÀ¸·Î È¸Àü
-            if (horizon != 0)
+            // Aí‚¤ì™€ Dí‚¤ë¥¼ ì…ë ¥ë°›ì•„ ì™¼ìª½ ë˜ëŠ” ì˜¤ë¥¸ìª½ìœ¼ë¡œ íšŒì „
+            if (Input.GetKey(KeyCode.A))
             {
-                PlayerGetHorizontal(horizon);
+                PlayerGetHorizontal(-1f);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                PlayerGetHorizontal(1f);
             }
 
-            // wÅ°¿Í sÅ°¸¦ ÀÔ·Â¹Ş¾Æ À§·Î ¶Ç´Â ¾Æ·¡·Î È¸Àü
-            if (vertical != 0)
+            // Wí‚¤ì™€ Sí‚¤ë¥¼ ì…ë ¥ë°›ì•„ ì™¼ìª½ ë˜ëŠ” ì˜¤ë¥¸ìª½ìœ¼ë¡œ íšŒì „
+            if (Input.GetKey(KeyCode.W))
             {
-                PlayerGetVertocal(vertical);
+                PlayerGetVertocal(1f);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                PlayerGetVertocal(-1f);
             }
 
         }
 
-        // ¸¶¿ì½º ¿ŞÂÊ ¹öÆ°À» ´©¸¦ ¶§
+        // ë§ˆìš°ìŠ¤ ì™¼ìª½ ë²„íŠ¼ì„ ëˆ„ë¥¼ ë•Œ
         if (Input.GetMouseButtonDown(0) && !isLaunch)
         {
             StartCharging();
         }
 
-        // ¸¶¿ì½º ¿ŞÂÊ ¹öÆ°À» ¶¼¾úÀ» ¶§
+        // ë§ˆìš°ìŠ¤ ì™¼ìª½ ë²„íŠ¼ì„ ë–¼ì—ˆì„ ë•Œ
         if (Input.GetMouseButtonUp(0) && isCharging)
         {
             SaveTransform();
             Shoot();
         }
 
-        // È­»ìÇ¥ ½ºÄÉÀÏ¸µ
+        // í™”ì‚´í‘œ ìŠ¤ì¼€ì¼ë§
         if (isCharging)
         {
             ScaleArrow();
         }
     }
 
-    #region ÃÊ±âÈ­
+
+    #region ì´ˆê¸°í™”
 
     /// <summary>
-    /// °¢Á¾ º¯¼ö ÃÊ±âÈ­
+    /// ê°ì¢… ë³€ìˆ˜ ì´ˆê¸°í™”
     /// </summary>
     private void Initialise()
     {
@@ -130,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     /// <summary>
-    /// "Planet" ÅÂ±×¸¦ °¡Áø ¸ğµç ¿ÀºêÁ§Æ®ÀÇ TransformÀ» Transforms_planet¿¡ ÀúÀåÇÕ´Ï´Ù.
+    /// "Planet" íƒœê·¸ë¥¼ ê°€ì§„ ëª¨ë“  ì˜¤ë¸Œì íŠ¸ì˜ Transformì„ Transforms_planetì— ì €ì¥í•©ë‹ˆë‹¤.
     /// </summary>
     public void FindPlanets()
     {
@@ -143,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// °¡Àå °¡±î¿î PlanetÀÇ TransformÀ» Transform_closestPlaent¿¡ ÀúÀåÇÕ´Ï´Ù.
+    /// ê°€ì¥ ê°€ê¹Œìš´ Planetì˜ Transformì„ Transform_closestPlaentì— ì €ì¥í•©ë‹ˆë‹¤.
     /// </summary>
     public void FindClosestPlanet()
     {
@@ -165,9 +176,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// TargetÀÇ TransformÀ» Transform_targetÀ¸·Î Á¤ÇÕ´Ï´Ù.
+    /// Targetì˜ Transformì„ Transform_targetìœ¼ë¡œ ì •í•©ë‹ˆë‹¤.
     /// </summary>
-    /// <param name="Transform_target"> Á¤ÇØÁÙ TargetÀÇ Transform </param>
+    /// <param name="Transform_target"> ì •í•´ì¤„ Targetì˜ Transform </param>
     public void SetTarget(Transform Transform_target)
     {
         this.Transform_target = Transform_target;
@@ -175,23 +186,47 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
-    #region ÇÃ·¹ÀÌ¾î ¿òÁ÷ÀÓ
+    #region í”Œë ˆì´ì–´ ì›€ì§ì„
+
+    private void FollowBall()
+    {
+        transform.position = gameobject_ball.transform.position;
+
+        // Player ì˜¤ë¸Œì íŠ¸ ë°©í–¥ ì´ˆê¸°í™”.;
+        FindClosestPlanet();
+
+        Vector3 UpVector = transform.position - Transform_closestPlaent.position;
+
+        Vector3 targetForward = Vector3.ProjectOnPlane(transform.forward, UpVector).normalized;
+        Quaternion targetRotationUP = Quaternion.LookRotation(targetForward, UpVector);
+        transform.rotation = targetRotationUP;
+    }
     /// <summary>
-    /// ArrowÀÇ ¹æÇâÀ» ÁÂ¿ì·Î ¿òÁ÷ÀÔ´Ï´Ù.
+    /// Arrowì˜ ë°©í–¥ì„ ì¢Œìš°ë¡œ ì›€ì§ì…ë‹ˆë‹¤.
     /// </summary>
-    /// <param name="horizon"> horizon ¸¸Å­ </param>
+    /// <param name="horizon"> horizon ë§Œí¼ </param>
     public void PlayerGetHorizontal(float horizon)
     {
-        transform.Rotate(transform.up, horizon * rotationSpeed * Time.deltaTime);
+        float distanceToUp = Vector3.Distance(transform.up, Vector3.up);
+        float adjustedRotationSpeed = Mathf.Lerp(minRotationSpeedLeftRight, maxRotationSpeedLeftRight, distanceToUp);
+
+        if (transform.up.y > 0f)
+        {
+            transform.Rotate(transform.up, horizon * adjustedRotationSpeed * Time.deltaTime, Space.Self);
+        }
+        else
+        {
+            transform.Rotate(transform.up, -horizon * adjustedRotationSpeed * Time.deltaTime, Space.Self);
+        }
     }
 
     /// <summary>
-    /// ArrowÀÇ ¹æÇâÀ» À§¾Æ·¡·Î ¿òÁ÷ÀÔ´Ï´Ù.
+    /// Arrowì˜ ë°©í–¥ì„ ìœ„ì•„ë˜ë¡œ ì›€ì§ì…ë‹ˆë‹¤.
     /// </summary>
-    /// <param name="vertical"> vertical ¸¸Å­ </param>
+    /// <param name="vertical"> vertical ë§Œí¼ </param>
     public void PlayerGetVertocal(float vertical)
     {
-        float rotationX = Arrow.transform.rotation.eulerAngles.x;
+        float rotationX = gameobject_arrow.transform.localRotation.eulerAngles.x; 
         if (rotationX > 180.0f)
         {
             rotationX -= 360.0f;
@@ -202,11 +237,11 @@ public class PlayerMovement : MonoBehaviour
             vertical = 0;
         }
 
-        Arrow.transform.RotateAround(transform.position, -transform.right, vertical * rotationSpeed * Time.deltaTime);
+        gameobject_arrow.transform.RotateAround(transform.position, -transform.right, vertical * rotationSpeedUpDown * Time.deltaTime);
     }
 
     /// <summary>
-    /// ¹ß»ç¸¦ À§ÇÑ ÃæÀüÀ» ½ÃÀÛÇÕ´Ï´Ù
+    /// ë°œì‚¬ë¥¼ ìœ„í•œ ì¶©ì „ì„ ì‹œì‘í•©ë‹ˆë‹¤
     /// </summary>
     public void StartCharging()
     {
@@ -216,17 +251,17 @@ public class PlayerMovement : MonoBehaviour
 
 
     /// <summary>
-    /// Player¸¦ ¹ß»çÇÕ´Ï´Ù.
+    /// Playerë¥¼ ë°œì‚¬í•©ë‹ˆë‹¤.
     /// </summary>
     public void Shoot()
     {
         isLaunch = true;
 
         isCharging = false;
-        Vector3 shootDirection = Arrow.transform.forward;
-        float shootPower = Arrow.transform.localScale.z * ArrowScaleForceRatio;
-        rigidbody.AddForce(shootDirection * shootPower, ForceMode.Impulse);
-        Arrow.SetActive(false);
+        Vector3 shootDirection = gameobject_arrow.transform.forward;
+        float shootPower = gameobject_arrow.transform.localScale.z * ArrowScaleForceRatio;
+        rigidbody_ball.AddForce(shootDirection * shootPower, ForceMode.Impulse);
+        gameobject_arrow.SetActive(false);
 
         Event_shot.Invoke();
 
@@ -234,7 +269,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Player°¡ ÁØºñµÉ¶§±îÁö ±â´Ù¸³´Ï´Ù.
+    /// Playerê°€ ì¤€ë¹„ë ë•Œê¹Œì§€ ê¸°ë‹¤ë¦½ë‹ˆë‹¤.
     /// </summary>
     /// <returns></returns>
     IEnumerator WaitPlayerReady()
@@ -243,7 +278,7 @@ public class PlayerMovement : MonoBehaviour
         float timer = 0f;
         while (timer < waitTime)
         {
-            while (IsObjectSpeedBelowThreshold(rigidbody, thresholdSpeed))
+            while (IsObjectSpeedBelowThreshold(rigidbody_ball, thresholdSpeed))
             {
                 timer = 0f;
                 yield return null;
@@ -254,18 +289,18 @@ public class PlayerMovement : MonoBehaviour
         PlayerInitialise();
         isLaunch = false;
         isReady = true;
-        Arrow.SetActive(true);
+        gameobject_arrow.SetActive(true);
         Event_Ready.Invoke();
     }
 
     /// <summary>
-    /// ArrowÀÇ ½ºÄÉÀÏÀ» ¿À½Ç·¹ÀÌ¼ÇÇÕ´Ï´Ù.
+    /// Arrowì˜ ìŠ¤ì¼€ì¼ì„ ì˜¤ì‹¤ë ˆì´ì…˜í•©ë‹ˆë‹¤.
     /// </summary>
     public void ScaleArrow()
     {
         if (isArrowLarging)
         {
-            arrowScale = Arrow.transform.localScale.z + arrowScaleSpeed * Time.deltaTime;
+            arrowScale = gameobject_arrow.transform.localScale.z + arrowScaleSpeed * Time.deltaTime;
             SetArrow(arrowScale);
             if (arrowScale > MaxPower)
             {
@@ -274,7 +309,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            arrowScale = Arrow.transform.localScale.z - arrowScaleSpeed * Time.deltaTime;
+            arrowScale = gameobject_arrow.transform.localScale.z - arrowScaleSpeed * Time.deltaTime;
             SetArrow(arrowScale);
             if (arrowScale < MinPower)
             {
@@ -284,50 +319,41 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// ArrowÀÇ ScaleÀ» ¼öÁ¤ÇÕ´Ï´Ù.
+    /// Arrowì˜ Scaleì„ ìˆ˜ì •í•©ë‹ˆë‹¤.
     /// </summary>
     /// <param name="arrowScale"></param>
     public void SetArrow(float arrowScale)
     {
-        Arrow.transform.localScale = new Vector3(1.0f, 1.0f, arrowScale);
+        gameobject_arrow.transform.localScale = new Vector3(1.0f, 1.0f, arrowScale);
     }
 
     /// <summary>
-    /// ÇÃ·¹ÀÌ¾îÀÇ »óÅÂ¸¦ ÁØºñ»óÅÂ·Î ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    /// í”Œë ˆì´ì–´ì˜ ìƒíƒœë¥¼ ì¤€ë¹„ìƒíƒœë¡œ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     /// </summary>
     public void PlayerInitialise()
     {
-        // velocity ÃÊ±âÈ­
-        ResetObjectVelocity(rigidbody);
+        // velocity ì´ˆê¸°í™”
+        ResetObjectVelocity(rigidbody_ball);
 
-        // Player ¿ÀºêÁ§Æ®¿Í Ball ¿ÀºêÁ§Æ®ÀÇ ¹æÇâ ÃÊ±âÈ­.
-        Quaternion ballRotation = Ball.transform.rotation;
-        FindClosestPlanet();
-        Vector3 UpVector = gameObject.transform.position - Transform_closestPlaent.position;
-        Quaternion UPRotation = Quaternion.LookRotation(UpVector, Vector3.up);
-        float yRotation = UPRotation.eulerAngles.y;
-        gameObject.transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
-        Ball.transform.rotation = ballRotation;
-
-        // Arrow ¿ÀºêÁ§Æ® ÃÊ±âÈ­
+        // Arrow ì˜¤ë¸Œì íŠ¸ ì´ˆê¸°í™”
         SetArrow(1.0f);
         ArrowInitialise();
     }
 
     /// <summary>
-    /// Arrow¸¦ ÁØºñ»óÅÂ·Î ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    /// Arrowë¥¼ ì¤€ë¹„ìƒíƒœë¡œ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     /// </summary>
     public void ArrowInitialise()
     {
-        Arrow.transform.rotation = transform.rotation;
-        Arrow.transform.localPosition = new Vector3(0, 0, 0.7f);
+        gameobject_arrow.transform.rotation = transform.rotation;
+        gameobject_arrow.transform.localPosition = new Vector3(0, 0, 0.7f);
     }
 
     /// <summary>
-    /// ¼Óµµ°¡ ÀÓ°è°ªº¸´Ù ³·À¸¸é false ¹İÈ¯
+    /// ì†ë„ê°€ ì„ê³„ê°’ë³´ë‹¤ ë‚®ìœ¼ë©´ false ë°˜í™˜
     /// </summary>
-    /// <param name="rigidbody"> ¼Óµµ¸¦ È®ÀÎÇÒ ¿ÀºêÁ§Æ®ÀÇ rigidbody </param>
-    /// <param name="threshold"> ÀÓ°è°ª </param>
+    /// <param name="rigidbody"> ì†ë„ë¥¼ í™•ì¸í•  ì˜¤ë¸Œì íŠ¸ì˜ rigidbody </param>
+    /// <param name="threshold"> ì„ê³„ê°’ </param>
     /// <returns></returns>
     public bool IsObjectSpeedBelowThreshold(Rigidbody rigidbody, float threshold)
     {
@@ -345,9 +371,9 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
-    #region ÇÃ·¹ÀÌ¾î ¸®½ºÆù
+    #region í”Œë ˆì´ì–´ ë¦¬ìŠ¤í°
     /// <summary>
-    /// ÇÃ·¹ÀÌ¾îÀÇ ÇöÀç À§Ä¡¿Í È¸ÀüÀ» ÀúÀåÇÕ´Ï´Ù.
+    /// í”Œë ˆì´ì–´ì˜ í˜„ì¬ ìœ„ì¹˜ì™€ íšŒì „ì„ ì €ì¥í•©ë‹ˆë‹¤.
     /// </summary>
     private void SaveTransform()
     {
@@ -356,12 +382,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// player¸¦ ÀÌÀü À§Ä¡·Î resetÇÕ´Ï´Ù.
+    /// playerë¥¼ ì´ì „ ìœ„ì¹˜ë¡œ resetí•©ë‹ˆë‹¤.
     /// </summary>
     public void ResetPlayer()
     {
         transform.SetPositionAndRotation(SavePosition, SaveRotation);
-        ResetObjectVelocity(rigidbody);
+        ResetObjectVelocity(rigidbody_ball);
 
         Event_Respawn.Invoke();
     }
@@ -371,9 +397,9 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
-    #region °ÔÀÓ ÁøÇà °ü·Ã
+    #region ê²Œì„ ì§„í–‰ ê´€ë ¨
     /// <summary>
-    /// °ÔÀÓÀ» ÀÏ½ÃÁ¤ÁöÇÕ´Ï´Ù.
+    /// ê²Œì„ì„ ì¼ì‹œì •ì§€í•©ë‹ˆë‹¤.
     /// </summary>
     public void GamePause()
     {
@@ -381,7 +407,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// °ÔÀÓÀ» Àç°³ÇÕ´Ï´Ù.
+    /// ê²Œì„ì„ ì¬ê°œí•©ë‹ˆë‹¤.
     /// </summary>
     public void GameResume()
     {
@@ -398,9 +424,9 @@ public class PlayerMovement : MonoBehaviour
 
     #region ETC
     /// <summary>
-    /// ¿ÀºêÁ§Æ®ÀÇ ¼Óµµ¸¦ 0À¸·Î ÃÊ±âÈ­
+    /// ì˜¤ë¸Œì íŠ¸ì˜ ì†ë„ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
     /// </summary>
-    /// <param name="rigidbody"> ÃÊ±âÈ­ ÇÒ ¿ÀºêÁ§Æ®ÀÇ rigidbody </param>
+    /// <param name="rigidbody"> ì´ˆê¸°í™” í•  ì˜¤ë¸Œì íŠ¸ì˜ rigidbody </param>
     public void ResetObjectVelocity(Rigidbody rigidbody)
     {
         if (rigidbody != null)

@@ -8,31 +8,30 @@ public class GravityField : MonoBehaviour
     public float gracityForceAmount = 10f;
 
     [Header("È®ÀÎ¿ë")]
-    [SerializeField] Transform Transform_player;
-    [SerializeField] Rigidbody Rigidbody_player;
+    [SerializeField] Transform transform_ball;
+    [SerializeField] Rigidbody rigidbody_ball;
     [SerializeField] bool isPlayerOn;
 
     private void Awake()
     {
         isPlayerOn = false;
-        Transform_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Rigidbody_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
+        transform_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Transform>();
+        rigidbody_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-        if (isPlayerOn && Rigidbody_player != null)
+        if (isPlayerOn && rigidbody_ball != null)
         {
-            Vector3 direction = transform.position - Transform_player.position;
-            float distance = direction.magnitude;
+            Vector3 direction = transform.position - transform_ball.position;
             Vector3 force = direction.normalized * gracityForceAmount;
-            Rigidbody_player.AddForce(force, ForceMode.Force);
+            rigidbody_ball.AddForce(force, ForceMode.Force);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Ball"))
         {
             isPlayerOn = true;
         }
@@ -40,7 +39,7 @@ public class GravityField : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Ball"))
         {
             isPlayerOn = false;
         }

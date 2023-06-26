@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5482ba829481343a27fb008799e5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialManager: {fileID: 0}
+  stageManager: {fileID: 0}
 --- !u!1 &5916366456955390891
 GameObject:
   m_ObjectHideFlags: 0

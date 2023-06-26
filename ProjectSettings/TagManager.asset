@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Environment
   - Planet
+  - Ball
   layers:
   - Default
   - TransparentFX
