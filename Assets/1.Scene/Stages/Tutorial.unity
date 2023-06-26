@@ -2757,10 +2757,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    - target: {fileID: 5130588715634388333, guid: 6aa361064ed6a6f40b91404228799394, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3434,10 +3430,6 @@ PrefabInstance:
       propertyPath: Event_Ready.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1928334582}
-    - target: {fileID: 6206090213465553094, guid: cd9f017e41c865245ac6041f1f58e2cb, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7370984684547090046, guid: cd9f017e41c865245ac6041f1f58e2cb, type: 3}
       propertyPath: m_Name
       value: Player

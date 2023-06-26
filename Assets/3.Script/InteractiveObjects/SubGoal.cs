@@ -14,11 +14,8 @@ public class SubGoal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("뭔가 제 몸에 들어왔어요");
         if (other.CompareTag("Player") && stageManager.targetCounter < stageManager.GameObject_Targets.Length)
         {
-            
-            Debug.Log("플레이어가 제 몸에 들어왔어요");
             GameObject currentTarget = stageManager.GameObject_Targets[stageManager.targetCounter];
 
             if (currentTarget == gameObject)
