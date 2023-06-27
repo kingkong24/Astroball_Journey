@@ -19,7 +19,13 @@ public class MainUI : MonoBehaviour
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        audioManager = FindObjectOfType<AudioManager>();
         canvasScaler = GetComponent<CanvasScaler>();
+    }
+
+    private void Start()
+    {
+        audioManager.PlayBGM("BGM_Test");
     }
 
     /// <summary>
@@ -96,7 +102,6 @@ public class MainUI : MonoBehaviour
     public void SetMasterVolumes(float volumes)
     {
         gameManager.MasterVolumes = volumes;
-        audioManager = FindObjectOfType<AudioManager>();
         audioManager.SetBgmVolume(gameManager.BGMVolumes);
         audioManager.SetBgmVolume(gameManager.SFXVolumes);
 
@@ -109,7 +114,6 @@ public class MainUI : MonoBehaviour
     public void SetBGMBolumes(float volumes)
     {
         gameManager.BGMVolumes = volumes;
-        audioManager = FindObjectOfType<AudioManager>();
         audioManager.SetBgmVolume(gameManager.BGMVolumes);
     }
 
@@ -120,7 +124,6 @@ public class MainUI : MonoBehaviour
     public void SetSFXBolumes(float volumes)
     {
         gameManager.SFXVolumes = volumes;
-        audioManager = FindObjectOfType<AudioManager>();
         audioManager.SetBgmVolume(gameManager.SFXVolumes);
     }
 
@@ -132,6 +135,10 @@ public class MainUI : MonoBehaviour
         Application.Quit();
     }
 
+    /// <summary>
+    /// Scene을 로드합니다.
+    /// </summary>
+    /// <param name="sceneName"></param>
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

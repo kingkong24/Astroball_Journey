@@ -29,11 +29,6 @@ public class AudioManager : MonoBehaviour
         Init();
     }
 
-    private void Start()
-    {
-        PlayBGM("BGM_Test");
-    }
-
     /// <summary>
     /// 초기화합니다.
     /// </summary>
