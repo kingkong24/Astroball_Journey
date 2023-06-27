@@ -10,26 +10,30 @@ public class BallHitSound : MonoBehaviour
     public int HitAudioNumber;
 
     [Header("확인용")]
+    [SerializeField] GameManager gameManager;
     [SerializeField] AudioSource audioSource;
-    [SerializeField] Rigidbody rb;
+    [SerializeField] new Rigidbody rigidbody;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        rb = GetComponent<Rigidbody>();
-        // 여기에 게임 메니저를 넣고 소리 조절;
+        rigidbody = GetComponent<Rigidbody>();
+        gameManager = FindObjectOfType<GameManager>();
+        if(gameManager != null)
+        {
+            audioSource.volume = gameManager.MasterVolumes * gameManager.SFXVolumes;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        float relativeSpeed = collision.relativeVelocity.magnitude;
+        float relativeSpeed = rigidbody.velocity.magnitude;
 
         audioSource.volume = relativeSpeed / 10f;
 
         if (HitAudioNumber >= 0 && HitAudioNumber < audioClips_HitSounds.Length)
         {
-            audioSource.clip = audioClips_HitSounds[HitAudioNumber];
-            audioSource.Play();
+            audioSource.PlayOneShot(audioClips_HitSounds[HitAudioNumber]);
         }
     }
 
