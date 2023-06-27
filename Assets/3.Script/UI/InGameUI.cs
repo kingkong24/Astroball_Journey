@@ -29,10 +29,10 @@ public class InGameUI : MonoBehaviour
         GameObject_Save.SetActive(false);
     }
 
-    public void SceneLoad(string name)
+    public void LoadScene(string sceneName)
     {
-        SceneLoad(name);
-    }
+        SceneManager.LoadScene(sceneName);
+    }   
 
 
 

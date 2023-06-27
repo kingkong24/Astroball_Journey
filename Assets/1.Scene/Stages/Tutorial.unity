@@ -766,7 +766,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: forceAmount
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2538133224814312220, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: m_RootOrder
@@ -1723,6 +1723,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 620693791}
+        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+        m_MethodName: HideCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Event_GamePause:
     m_PersistentCalls:
       m_Calls:
@@ -1762,8 +1774,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 396412169}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 620693791}
+        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
         m_MethodName: ViewCursor
         m_Mode: 1
         m_Arguments:
@@ -1813,8 +1825,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 396412169}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 620693791}
+        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
         m_MethodName: HideCursor
         m_Mode: 1
         m_Arguments:
@@ -1867,8 +1879,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 396412169}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 620693791}
+        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
         m_MethodName: ViewCursor
         m_Mode: 1
         m_Arguments:
@@ -2369,7 +2381,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1679244024}
         m_TargetAssemblyTypeName: InGameUI, Assembly-CSharp
-        m_MethodName: SceneLoad
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4726,7 +4738,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1679244024}
         m_TargetAssemblyTypeName: InGameUI, Assembly-CSharp
-        m_MethodName: SceneLoad
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

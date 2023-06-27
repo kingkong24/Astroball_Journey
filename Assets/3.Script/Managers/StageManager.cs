@@ -132,6 +132,23 @@ public class StageManager : MonoBehaviour
         Event_GameClear.Invoke();
     }
 
+    /// <summary>
+    /// 마우스 커서를 숨깁니다.
+    /// </summary>
+    public void HideCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    /// <summary>
+    /// 마우스 커서를 드러냅니다.
+    /// </summary>
+    public void ViewCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 
 }
 
