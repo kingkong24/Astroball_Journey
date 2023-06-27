@@ -134,7 +134,7 @@ MonoBehaviour:
   Transform_closestPlaent: {fileID: 0}
   MaxPower: 2
   MinPower: 0.1
-  thresholdSpeed: 0.001
+  thresholdSpeed: 0.002
   waitTime: 0.2
   rotationSpeedUpDown: 90
   minRotationSpeedLeftRight: 90
