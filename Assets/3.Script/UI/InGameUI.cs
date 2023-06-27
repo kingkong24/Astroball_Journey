@@ -7,6 +7,7 @@ public class InGameUI : MonoBehaviour
 {
     [Header("UIs")]
     [SerializeField] GameObject GameObject_exit;
+    [SerializeField] GameObject GameObject_Save;
 
     public void OnExit()
     {
@@ -18,10 +19,22 @@ public class InGameUI : MonoBehaviour
         GameObject_exit.SetActive(false);
     }
 
+    public void OnSave()
+    {
+        GameObject_Save.SetActive(true);
+    }
+
+    public void OffSave()
+    {
+        GameObject_Save.SetActive(false);
+    }
+
     public void SceneLoad(string name)
     {
         SceneLoad(name);
     }
+
+
 
 
 }
