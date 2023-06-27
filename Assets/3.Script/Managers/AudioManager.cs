@@ -118,7 +118,6 @@ public class AudioManager : MonoBehaviour
     /// <param name="volume"></param>
     public void SetSFXVolume(float volume)
     {
-        Debug.Log("audioManager" + volume);
         SFXplayer.volume = volume;
     }
 }

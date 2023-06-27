@@ -16,8 +16,8 @@ public class Goal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-                stageManager.Event_GameClear.Invoke();
-                Debug.Log("霸烙 场车促");
+            stageManager.GameClear();
+            Debug.Log("霸烙 场车促");
         }
     }
 

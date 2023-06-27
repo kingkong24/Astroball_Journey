@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class StageManager : MonoBehaviour
-{
+{ 
     [Header("Player")]
     [SerializeField] PlayerMovement playerMovement;
 
@@ -24,7 +24,7 @@ public class StageManager : MonoBehaviour
     public UnityEvent Event_GameStart;
     public UnityEvent Event_GamePause;
     public UnityEvent Event_GameResume;
-    public UnityEvent Event_GameExit;
+    public UnityEvent Event_GameClearExit;
     public UnityEvent Event_GameClear;
 
     private void Awake()
@@ -120,6 +120,16 @@ public class StageManager : MonoBehaviour
     public void ConfirmShoot()
     {
         isPlayerReady = false;
+    }
+
+    /// <summary>
+    /// 게임 클리어 이벤트를 발생합니다.
+    /// </summary>
+    public void GameClear()
+    {
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        audioManager.PlaySFX("SFX_Clapping");   
+        Event_GameClear.Invoke();
     }
 
 
