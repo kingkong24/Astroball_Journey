@@ -41,6 +41,15 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 마우스 커서를 드러냅니다.
+    /// </summary>
+    public void ViewCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    /// <summary>
     /// MasterVolum을 설정합니다.
     /// </summary>
     /// <param name="value"></param>
