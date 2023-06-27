@@ -72,7 +72,7 @@ public class LinearForceField : MonoBehaviour
         {
             GameObject effectObject = gameObjects_effect[effectCounter];
             effectObject.transform.position = GetRandomPosition();
-            transform.rotation = Quaternion.LookRotation(forceDirection);
+            effectObject.transform.rotation = Quaternion.LookRotation(forceDirection);
 
             effectObject.SetActive(true);
 
