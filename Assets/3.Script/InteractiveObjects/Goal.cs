@@ -20,6 +20,4 @@ public class Goal : MonoBehaviour
             Debug.Log("∞‘¿” ≥°≥µ¥Ÿ");
         }
     }
-
-
 }
