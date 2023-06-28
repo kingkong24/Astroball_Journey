@@ -377,6 +377,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void SaveTransform()
     {
+        isArrowLarging = true;
         SavePosition = gameobject_ball.transform.position;
         SaveRotation = gameobject_ball.transform.rotation;
     }
@@ -389,11 +390,14 @@ public class PlayerMovement : MonoBehaviour
         gameobject_ball.transform.SetPositionAndRotation(SavePosition, SaveRotation);
         ResetObjectVelocity(rigidbody_ball);
 
-        Event_Respawn.Invoke();
+        StartCoroutine(WaitForOneFrame());
     }
 
-
-
+    private IEnumerator WaitForOneFrame()
+    {
+        yield return null;
+        Event_Respawn.Invoke();
+    }
 
     #endregion
 

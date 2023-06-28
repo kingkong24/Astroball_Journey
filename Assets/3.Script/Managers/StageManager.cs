@@ -18,6 +18,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] bool isGameStart = false;
     [SerializeField] bool isGamePause = false;
     [SerializeField] bool isPlayerReady = true;
+    [SerializeField] bool isGameClear = false;
 
     [Space(0.2f)]
     [Header("게임 이벤트")]
@@ -41,7 +42,7 @@ public class StageManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && isPlayerReady)
+        if (Input.GetKeyDown(KeyCode.Escape) && isPlayerReady && !isGameClear)
         {
             if (!isGamePause)
             {
@@ -63,6 +64,7 @@ public class StageManager : MonoBehaviour
     {
         isGameStart = false;
         isGamePause = false;
+        isGameClear = false;
         targetCounter = 0;
     }
 
@@ -127,8 +129,9 @@ public class StageManager : MonoBehaviour
     /// </summary>
     public void GameClear()
     {
+        isGameClear = true;
         AudioManager audioManager = FindObjectOfType<AudioManager>();
-        audioManager.PlaySFX("SFX_Clapping");   
+        audioManager.PlaySFX("SFX_Clapping");
         Event_GameClear.Invoke();
     }
 
