@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         }
 
         audioManager = FindObjectOfType<AudioManager>();
+        Screen.SetResolution(1920, 1080, true);
     }
 
     /// <summary>
