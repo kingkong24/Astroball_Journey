@@ -23,6 +23,8 @@ public class SubGoal : MonoBehaviour
             {
                 
                 stageManager.NextTarget();
+                PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+                playerMovement.SavePosition = transform.position - new Vector3(0, transform.localPosition.y - 1f, 0);
                 gameObject.SetActive(false);
             }
         }

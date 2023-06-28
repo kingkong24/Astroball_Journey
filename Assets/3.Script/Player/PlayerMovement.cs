@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("확인용")]
     [SerializeField] Rigidbody rigidbody_ball;
     [SerializeField] Quaternion SaveRotation;
-    [SerializeField] Vector3 SavePosition;
+    public Vector3 SavePosition;
     [SerializeField] float arrowScale;
     [Space(5f)]
     [SerializeField] bool isReady = true;
