@@ -912,6 +912,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6300553277419183979}
   - component: {fileID: 158327031549678327}
+  - component: {fileID: 4356897840085958174}
+  - component: {fileID: 2745427079631623153}
   m_Layer: 20
   m_Name: Bear Polar
   m_TagString: Animal
@@ -943,7 +945,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7079599022999085360}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -959,6 +961,49 @@ CapsuleCollider:
   m_Height: 2.7
   m_Direction: 2
   m_Center: {x: 0, y: 0.7, z: 0.85}
+--- !u!54 &4356897840085958174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079599022999085360}
+  serializedVersion: 4
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2745427079631623153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079599022999085360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
 --- !u!1 &7225745574960953855
 GameObject:
   m_ObjectHideFlags: 0
