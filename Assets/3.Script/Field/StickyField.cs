@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class StickyField : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            collision.rigidbody.velocity = Vector3.zero;
+            Rigidbody ballRigidbody = collision.rigidbody;
+            ballRigidbody.velocity *= 0.9f;
         }
     }
 }

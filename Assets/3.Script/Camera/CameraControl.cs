@@ -21,7 +21,6 @@ public class CameraControl : MonoBehaviour
     [Header("¼³Á¤")]
     [SerializeField] float cameraDistanceAgainstTarget = 5.0f;
     [SerializeField] float cameraDistanceAgainstPlaent = 2.0f;
-    [SerializeField] float cameraLookUp = 1.0f;
     [SerializeField] float cameraFollowSpeed = 10.0f;
     [SerializeField] float cameraSpinSpeedX = 45.0f;
     [SerializeField] float cameraSpinSpeedY = 30.0f;

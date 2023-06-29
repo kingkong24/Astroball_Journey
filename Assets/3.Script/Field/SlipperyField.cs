@@ -34,7 +34,7 @@ public class SlipperyField : MonoBehaviour
                 isSaved = true;
             }
             originalRigidbody.drag = SlipperyDrag;
-            originalRigidbody.angularDrag = SlipperyDrag;
+            originalRigidbody.angularDrag = SlipperyAngularDrag;
         }
     }
 
@@ -45,6 +45,10 @@ public class SlipperyField : MonoBehaviour
             originalRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             originalRigidbody.drag = originalDrag;
             originalRigidbody.angularDrag = originalAngularDrag;
+            if (isSaved)
+            {
+                isSaved = false;
+            }
         }
     }
 }
