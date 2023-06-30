@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class StageManager : MonoBehaviour
 { 
     [Header("Player")]
-    [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] PlayerControl playerMovement;
 
     [Space(0.2f)]
     [Header("Targets")]

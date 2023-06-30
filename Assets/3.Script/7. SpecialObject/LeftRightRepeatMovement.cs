@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepeatlinearMovement : MonoBehaviour
+public class LeftRightRepeatMovement : MonoBehaviour
 {
     [Header("설정")]
     [SerializeField] float speed; // 이동 속도

@@ -27,7 +27,7 @@ public class SubGoal : MonoBehaviour
             {
                 Event_ThisSubGoalEnter.Invoke();
                 stageManager.NextTarget();
-                PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+                PlayerControl playerMovement = other.GetComponent<PlayerControl>();
                 playerMovement.SavePosition = transform.position - new Vector3(0, transform.localPosition.y - 1f, 0);
 
                 gameObject.SetActive(false);

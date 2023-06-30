@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EscapeBackUI : MonoBehaviour
+public class EscapeBack : MonoBehaviour
 {
     [Header("Event")]
     public UnityEvent unityEvent_EscapeBack;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectpushMovement : MonoBehaviour
+public class ObjectPushMovement : MonoBehaviour
 {
     [Header("오브젝트")]
     [SerializeField] GameObject targetObject;

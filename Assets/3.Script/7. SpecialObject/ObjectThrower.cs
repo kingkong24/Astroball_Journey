@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimalThrower : MonoBehaviour
+public class ObjectThrower : MonoBehaviour
 {
     [Header("¼³Á¤")]
     [SerializeField] Rigidbody[] rigidbody_toThrow;

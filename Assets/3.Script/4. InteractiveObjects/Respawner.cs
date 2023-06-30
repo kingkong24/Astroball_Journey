@@ -8,7 +8,7 @@ public class Respawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+            PlayerControl playerMovement = other.GetComponent<PlayerControl>();
             if (playerMovement != null)
             {
                 playerMovement.ResetPlayer();

@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectSpiner : MonoBehaviour
+public class ObjectRotateArounder
+    : MonoBehaviour
 {
     [Header("오브젝트들")]
     [SerializeField] GameObject[] gameObjects;

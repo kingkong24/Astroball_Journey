@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectReplacer : MonoBehaviour
+public class ObjectRandomPlacer : MonoBehaviour
 {
     [Header("랜덤으로 배치할 오브젝트들")]
     [SerializeField] GameObject[] gameObjects;

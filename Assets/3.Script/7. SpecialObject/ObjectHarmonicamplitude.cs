@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectHarmonicamplitude : MonoBehaviour
+public class ObjectHarmonicAmplitude : MonoBehaviour
 {
     [Header("¼³Á¤")]
     [Range(0f, 90f)]

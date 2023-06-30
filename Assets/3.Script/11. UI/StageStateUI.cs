@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class States : MonoBehaviour
+public class StageStateUI : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] Text Text_TimeCount;
