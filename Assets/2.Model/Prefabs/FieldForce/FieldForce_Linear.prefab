@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7724213523501822909}
   - component: {fileID: 177206897004937259}
   m_Layer: 0
-  m_Name: FieldForce
+  m_Name: FieldForce_Linear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

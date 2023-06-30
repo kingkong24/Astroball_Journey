@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControl : MonoBehaviour
+public class PlayerCameraControl : MonoBehaviour
 {
     [Header("'Player' 태그가 붙은 오브젝트를 찾습니다.")]
     [SerializeField] GameObject GameObject_player;
