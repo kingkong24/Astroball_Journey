@@ -20,19 +20,24 @@ public class SlipperyField : MonoBehaviour
     private void Awake()
     {
         isSaved = false;
+        GameObject ballObject = GameObject.FindGameObjectWithTag("Ball");
+        if (ballObject != null)
+        {
+            Rigidbody ballRigidbody = ballObject.GetComponent<Rigidbody>();
+            if (ballRigidbody != null)
+            {
+                originalDrag = ballRigidbody.drag;
+                originalAngularDrag = ballRigidbody.angularDrag;
+                isSaved = true;
+            }
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
             originalRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            if (!isSaved)
-            {
-                originalDrag = originalRigidbody.drag;
-                originalAngularDrag = originalRigidbody.angularDrag;
-                isSaved = true;
-            }
             originalRigidbody.drag = SlipperyDrag;
             originalRigidbody.angularDrag = SlipperyAngularDrag;
         }
@@ -45,10 +50,6 @@ public class SlipperyField : MonoBehaviour
             originalRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             originalRigidbody.drag = originalDrag;
             originalRigidbody.angularDrag = originalAngularDrag;
-            if (isSaved)
-            {
-                isSaved = false;
-            }
         }
     }
 }
