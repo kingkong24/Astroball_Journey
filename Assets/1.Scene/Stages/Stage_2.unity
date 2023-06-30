@@ -826,7 +826,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (21)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -871,7 +872,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66238686}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -885,11 +886,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &78339801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -950,7 +951,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -995,7 +997,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78339803}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1009,11 +1011,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &84706267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1222,7 +1224,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1267,7 +1270,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104778638}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1281,11 +1284,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &108180164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1346,7 +1349,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1391,7 +1395,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108180166}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1405,11 +1409,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &111438446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1898,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 131791781}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &132718500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (43)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 132718504}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 132718503}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &132718501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 132718500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &132718502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 132718500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &132718503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132718502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &132718504
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132718502}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &147618651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2553,7 +2682,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2598,7 +2728,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188218143}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2612,11 +2742,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &191193063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2751,7 +2881,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2796,7 +2927,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199147245}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2810,11 +2941,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &215222343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2889,6 +3020,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1474128787356105124, guid: f2b83b21ced66144c81bb815027d09e6, type: 3}
   m_PrefabInstance: {fileID: 215222343}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &217805807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (48)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 217805811}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 217805810}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &217805808 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 217805807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &217805809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 217805807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &217805810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217805809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &217805811
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217805809}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &223385243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2949,7 +3205,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (31)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2994,7 +3251,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223385245}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3008,11 +3265,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &227131177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4109,7 +4366,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4154,7 +4412,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300557788}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -4168,11 +4426,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &306974529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2538133224814312220, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
@@ -5241,7 +5499,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (32)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5286,7 +5545,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406731982}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -5300,11 +5559,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &417032675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5795,7 +6054,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5840,7 +6100,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443674795}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -5854,11 +6114,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &447266796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6229,6 +6489,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 469596625}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &476143032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (45)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 476143036}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 476143035}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &476143033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 476143032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &476143034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 476143032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &476143035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476143034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &476143036
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476143034}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &482989656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6525,7 +6910,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (18)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6570,7 +6956,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496337965}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -6584,11 +6970,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &509263218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7033,6 +7419,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 553746388}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &559350848
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (40)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 559350852}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 559350851}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &559350849 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 559350848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &559350850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 559350848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &559350851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559350850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &559350852
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559350850}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &561710685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8501,7 +9012,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -8546,7 +9058,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662662417}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -8560,11 +9072,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &673305971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8672,6 +9184,131 @@ Transform:
   m_Father: {fileID: 25055830}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &682934100
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (37)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 682934104}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 682934103}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &682934101 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 682934100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &682934102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 682934100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &682934103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682934102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &682934104
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682934102}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &688087986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9033,7 +9670,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (33)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -9078,7 +9716,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716995334}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -9092,11 +9730,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &731925189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9512,7 +10150,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (26)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -9557,7 +10196,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813938777}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -9571,11 +10210,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &826802925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9798,6 +10437,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 835018954}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &836291334
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (36)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 836291338}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 836291337}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &836291335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 836291334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &836291336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 836291334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &836291337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836291336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &836291338
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836291336}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &854912563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11932,6 +12696,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6606931393625799776, guid: b820b5807a11b4e4995ede5f1b27572e, type: 3}
   m_PrefabInstance: {fileID: 1048735093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1048882559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (35)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1048882563}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1048882562}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1048882560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1048882559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1048882561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1048882559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1048882562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048882561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1048882563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048882561}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1052480922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11992,7 +12881,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -12037,7 +12927,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052480924}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -12051,11 +12941,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1055483404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12389,6 +13279,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 1102295527}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1106354382
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (47)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1106354386}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1106354385}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1106354383 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1106354382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1106354384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1106354382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1106354385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106354384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1106354386
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106354384}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1108733413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12449,7 +13464,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (34)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -12494,7 +13510,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108733415}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -12508,11 +13524,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1110055856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12661,6 +13677,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 1127442389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1139094947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (46)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1139094951}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1139094950}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1139094948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1139094947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1139094949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1139094947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1139094950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139094949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1139094951
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139094949}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1145260469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12943,7 +14084,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -12988,7 +14130,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186658918}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -13002,11 +14144,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1196875172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13588,6 +14730,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1474128787356105124, guid: f2b83b21ced66144c81bb815027d09e6, type: 3}
   m_PrefabInstance: {fileID: 1262531777}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1263677904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (44)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1263677908}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1263677907}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1263677905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1263677904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1263677906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1263677904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1263677907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263677906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1263677908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263677906}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1267504635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13796,7 +15063,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (19)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -13841,7 +15109,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274228202}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -13855,11 +15123,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1277852714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13991,7 +15259,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -14036,7 +15305,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282565997}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -14050,11 +15319,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1285170618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14577,6 +15846,21 @@ Transform:
   - {fileID: 406731981}
   - {fileID: 716995333}
   - {fileID: 1108733414}
+  - {fileID: 1048882560}
+  - {fileID: 836291335}
+  - {fileID: 682934101}
+  - {fileID: 1479014694}
+  - {fileID: 1846295538}
+  - {fileID: 559350849}
+  - {fileID: 2068932172}
+  - {fileID: 1842051800}
+  - {fileID: 132718501}
+  - {fileID: 1263677905}
+  - {fileID: 476143033}
+  - {fileID: 1139094948}
+  - {fileID: 1106354383}
+  - {fileID: 217805808}
+  - {fileID: 1963285469}
   m_Father: {fileID: 1361276012}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14628,9 +15912,24 @@ MonoBehaviour:
   - {fileID: 406731982}
   - {fileID: 716995334}
   - {fileID: 1108733415}
-  minVector: {x: -19, y: 0.7, z: -60}
-  maxVector: {x: 19, y: 0.7, z: 60}
-  minDistance: 8
+  - {fileID: 1048882561}
+  - {fileID: 836291336}
+  - {fileID: 682934102}
+  - {fileID: 1479014695}
+  - {fileID: 1846295539}
+  - {fileID: 559350850}
+  - {fileID: 2068932173}
+  - {fileID: 1842051801}
+  - {fileID: 132718502}
+  - {fileID: 1263677906}
+  - {fileID: 476143034}
+  - {fileID: 1139094949}
+  - {fileID: 1106354384}
+  - {fileID: 217805809}
+  - {fileID: 1963285470}
+  minVector: {x: -19, y: 0.75, z: -60}
+  maxVector: {x: 19, y: 0.75, z: 60}
+  minDistance: 6
   MaxTryCount: 10000
   points: []
 --- !u!1 &1361276011
@@ -14933,7 +16232,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (20)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -14978,7 +16278,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380773561}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -14992,11 +16292,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1388156095
 GameObject:
   m_ObjectHideFlags: 0
@@ -15744,6 +17044,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 1463084899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1479014693
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (38)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479014697}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479014696}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1479014694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1479014693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1479014695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1479014693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479014696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479014695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1479014697
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479014695}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1482748977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15952,7 +17377,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -15997,7 +17423,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504225007}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -16011,11 +17437,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1509306689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16844,7 +18270,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (22)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -16889,7 +18316,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567713343}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -16903,11 +18330,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1576011441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16968,7 +18395,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -17013,7 +18441,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576011443}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -17027,11 +18455,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1576070881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17445,7 +18873,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (30)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -17490,7 +18919,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623668755}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -17504,11 +18933,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1626312249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8301812972314209210, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
@@ -17796,7 +19225,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (24)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -17841,7 +19271,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671846190}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -17855,11 +19285,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1679244024 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 952948700303354573, guid: e769a8b1049136d48865047c813b1a6f, type: 3}
@@ -18136,7 +19566,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -18181,7 +19612,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729680977}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -18195,11 +19626,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1732298336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2247619188971817450, guid: d30b1279ccc111a429f29478f3473d2b, type: 3}
@@ -18571,7 +20002,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -18616,7 +20048,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772871939}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -18630,11 +20062,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1781409554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18789,10 +20221,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1348216839}
     m_Modifications:
-    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: force
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: period
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356897840085958174, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Mass
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356897840085958174, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356897840085958174, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -18841,10 +20289,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1806682226}
   m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
 --- !u!4 &1806682221 stripped
 Transform:
@@ -18856,6 +20308,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
   m_PrefabInstance: {fileID: 1806682220}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1806682226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806682222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
 --- !u!1 &1811658567
 GameObject:
   m_ObjectHideFlags: 0
@@ -19022,7 +20490,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -19067,7 +20536,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819636682}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -19081,11 +20550,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1823220711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19308,6 +20777,256 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1325024334061647587, guid: 8482afa4e5d67584bb15e249dd340040, type: 3}
   m_PrefabInstance: {fileID: 1832029803}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1842051799
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (42)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1842051803}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1842051802}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1842051800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1842051799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1842051801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1842051799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1842051802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842051801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1842051803
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842051801}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!1001 &1846295537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (39)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1846295541}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1846295540}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1846295538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1846295537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1846295539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1846295537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1846295540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846295539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1846295541
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846295539}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1855999739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19590,7 +21309,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (27)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -19635,7 +21355,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874821869}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -19649,11 +21369,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1876148879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19788,7 +21508,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (29)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -19833,7 +21554,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878748388}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -19847,11 +21568,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1880962921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19912,7 +21633,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (23)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -19957,7 +21679,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880962923}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -19971,11 +21693,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1888136229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20802,7 +22524,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -20847,7 +22570,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928959679}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -20861,11 +22584,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1934652676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21000,7 +22723,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (28)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -21045,7 +22769,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942131999}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -21059,11 +22783,136 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!1001 &1963285468
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (49)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963285472}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963285471}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &1963285469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1963285468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1963285470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 1963285468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963285471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963285470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &1963285472
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963285470}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1969669953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21360,7 +23209,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Polar (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -21405,7 +23255,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994423087}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -21419,11 +23269,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1995470953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22054,6 +23904,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6606931393625799776, guid: b820b5807a11b4e4995ede5f1b27572e, type: 3}
   m_PrefabInstance: {fileID: 2060113308}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2068932171
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1348216839}
+    m_Modifications:
+    - target: {fileID: 158327031549678327, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a09a0dc05ce382c4c8fe3eda135ce191, type: 2}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      propertyPath: m_Name
+      value: Bear Polar (41)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3010858788607400628, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2068932175}
+    - targetCorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2068932174}
+  m_SourcePrefab: {fileID: 100100000, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+--- !u!4 &2068932172 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6300553277419183979, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 2068932171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2068932173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079599022999085360, guid: 65cc64d5e9b59754bb7e0c225a0c69ec, type: 3}
+  m_PrefabInstance: {fileID: 2068932171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2068932174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068932173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  period: 5
+  isRandomRotation: 1
+  timer: 0
+--- !u!54 &2068932175
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068932173}
+  serializedVersion: 4
+  m_Mass: 1.8
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &2071483259
 PrefabInstance:
   m_ObjectHideFlags: 0
