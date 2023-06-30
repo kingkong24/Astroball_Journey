@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 6300553277419183979}
   - component: {fileID: 158327031549678327}
   - component: {fileID: 4356897840085958174}
-  - component: {fileID: 3010858788607400628}
+  - component: {fileID: 963091437490021753}
   m_Layer: 20
   m_Name: Bear Polar
   m_TagString: Animal
@@ -969,7 +969,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7079599022999085360}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 1.8
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -983,12 +983,12 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &3010858788607400628
+--- !u!114 &963091437490021753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -997,14 +997,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7079599022999085360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370fc8a4ecff4914591553911073497a, type: 3}
+  m_Script: {fileID: 11500000, guid: e84cee4d675df8b4198155759fa5f21a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   period: 5
   isRandomRotation: 1
   timer: 0
-  rigidbody: {fileID: 0}
 --- !u!1 &7225745574960953855
 GameObject:
   m_ObjectHideFlags: 0
