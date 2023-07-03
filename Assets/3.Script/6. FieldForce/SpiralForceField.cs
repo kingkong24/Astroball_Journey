@@ -2,44 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LinearForceField : MonoBehaviour
+public class SpiralForceField : MonoBehaviour
 {
-    [Header("장의 힘의 크기와 방향")]
-    public float forceAmount = 10f;
-    public Vector3 forceDirection = Vector3.forward;
+    [Header("장의 힘의 크기")]
+    public float forceAmountUP;
+    public float forceAmountRight;
 
-    [Header("효과 설정")]
+    [Header("Effect")]
     [SerializeField] GameObject[] gameObjects_effect;
-    [SerializeField] float effectCooltime = 0.5f;
+    [SerializeField] float effectCooltime;
+    [SerializeField] float rotationSpeed;
+
 
     [Header("확인용")]
-    [SerializeField] FieldForceChecker fieldForceChecker;
-    [SerializeField] Rigidbody Rigidbody_ball;
     [SerializeField] new Collider collider;
-    [SerializeField] int EffectNum;
+    [SerializeField] FieldForceChecker fieldForceChecker;
+    [SerializeField] Rigidbody rigidbody_ball;
     [SerializeField] int effectCounter;
     [SerializeField] float activationTimer;
+    public Vector3 directsionRight;
+
     public bool isPlayerOn;
+
 
     private void Awake()
     {
-        EffectNum = gameObjects_effect.Length;
-        activationTimer = 0;
-        effectCounter = 0;
-        isPlayerOn = false;
         collider = GetComponent<Collider>();
         fieldForceChecker = FindObjectOfType<FieldForceChecker>();
-        Rigidbody_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
-    }
+        rigidbody_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
+        activationTimer = 0;
 
+    }
     private void Update()
     {
         EffectActive();
 
-        if (isPlayerOn && Rigidbody_ball != null)
+        foreach (GameObject gameObject_effect in gameObjects_effect)
         {
-            Vector3 force = forceDirection.normalized * forceAmount;
-            Rigidbody_ball.AddForce(force, ForceMode.Force);
+            gameObject_effect.transform.position = gameObject_effect.transform.position + forceAmountUP * transform.up * Time.deltaTime;
+            gameObject_effect.transform.RotateAround(transform.position, transform.up, rotationSpeed * Time.deltaTime);
+        }
+
+        if (isPlayerOn && rigidbody_ball != null)
+        {
+            Vector3 Projection = Vector3.ProjectOnPlane(rigidbody_ball.transform.position - transform.position, transform.up);
+            float distance = Projection.magnitude;
+            Vector3 direction = Quaternion.AngleAxis(135, transform.up) * Projection;
+            directsionRight = direction * forceAmountRight / distance;
+            rigidbody_ball.AddForce(directsionRight, ForceMode.Force);
+            rigidbody_ball.AddForce(direction * forceAmountUP, ForceMode.Force);
+            fieldForceChecker.Recalculate();
+
         }
     }
 
@@ -48,7 +61,6 @@ public class LinearForceField : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             isPlayerOn = true;
-            fieldForceChecker.Recalculate();
         }
     }
 
@@ -57,8 +69,10 @@ public class LinearForceField : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             isPlayerOn = false;
-            fieldForceChecker.Recalculate();
         }
+
+        fieldForceChecker.Recalculate();
+
     }
 
     /// <summary>
@@ -66,7 +80,7 @@ public class LinearForceField : MonoBehaviour
     /// </summary>
     private void EffectActive()
     {
-        if(gameObjects_effect.Length == 0)
+        if (gameObjects_effect.Length == 0)
         {
             return;
         }
@@ -76,15 +90,10 @@ public class LinearForceField : MonoBehaviour
         if (activationTimer > effectCooltime)
         {
             GameObject effectObject = gameObjects_effect[effectCounter];
-            effectObject.transform.SetPositionAndRotation(GetRandomPosition(), Quaternion.LookRotation(forceDirection));
-
+            effectObject.transform.position = GetRandomPosition();
             effectObject.SetActive(true);
-
-            Rigidbody effectRigidbody = effectObject.GetComponent<Rigidbody>();
-            effectRigidbody.velocity = forceDirection * forceAmount;
-
             effectCounter++;
-            if(effectCounter >= EffectNum)
+            if (effectCounter >= gameObjects_effect.Length)
             {
                 effectCounter = 0;
             }

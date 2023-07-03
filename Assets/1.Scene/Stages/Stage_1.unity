@@ -2640,6 +2640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SubGoal
       objectReference: {fileID: 0}
+    - target: {fileID: 6513146548121110071, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d324cf679edc7b04892838ccf17e5c37, type: 2}
     - target: {fileID: 7695342095644621645, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
       propertyPath: m_RootOrder
       value: -1

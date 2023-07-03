@@ -467,7 +467,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 272e9077ea3d4e841875b0c7af314ab8, type: 2}
+  - {fileID: 2100000, guid: d324cf679edc7b04892838ccf17e5c37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -525,6 +525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageManager: {fileID: 0}
+  Event_ThisSubGoalEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7980031772060867987
 GameObject:
   m_ObjectHideFlags: 0

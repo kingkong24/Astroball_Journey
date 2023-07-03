@@ -12,10 +12,12 @@ public class FieldForceChecker : MonoBehaviour
 
     [Header("포함할 역장")]
     [SerializeField] LinearForceField[] LinearForceFields;
+    [SerializeField] SpiralForceField[] spiralForceFields;
 
     private void Awake()
     {
         LinearForceFields = FindObjectsOfType<LinearForceField>();
+        spiralForceFields = FindObjectsOfType<SpiralForceField>();
     }
 
     private void Start()
@@ -37,6 +39,18 @@ public class FieldForceChecker : MonoBehaviour
                 totalForce += forceField.forceAmount * forceField.forceDirection;
             }
         }
+        
+        foreach (SpiralForceField forceField in spiralForceFields)
+        {
+            if (forceField.isPlayerOn)
+            {
+                totalForce += forceField.forceAmountUP * forceField.transform.up;
+                totalForce += forceField.directsionRight;
+
+            }
+        }
+
+        
 
         if (totalForce.magnitude == 0f)
         {

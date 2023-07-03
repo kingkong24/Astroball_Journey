@@ -15,11 +15,9 @@ public class SlipperyField : MonoBehaviour
     [SerializeField] Rigidbody originalRigidbody;
     [SerializeField] float originalDrag;
     [SerializeField] float originalAngularDrag;
-    [SerializeField] bool isSaved;
 
     private void Awake()
     {
-        isSaved = false;
         GameObject ballObject = GameObject.FindGameObjectWithTag("Ball");
         if (ballObject != null)
         {
@@ -28,7 +26,6 @@ public class SlipperyField : MonoBehaviour
             {
                 originalDrag = ballRigidbody.drag;
                 originalAngularDrag = ballRigidbody.angularDrag;
-                isSaved = true;
             }
         }
     }
