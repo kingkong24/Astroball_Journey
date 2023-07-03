@@ -50,7 +50,7 @@ public class SpiralForceField : MonoBehaviour
             Vector3 direction = Quaternion.AngleAxis(135, transform.up) * Projection;
             directsionRight = direction * forceAmountRight / distance;
             rigidbody_ball.AddForce(directsionRight, ForceMode.Force);
-            rigidbody_ball.AddForce(direction * forceAmountUP, ForceMode.Force);
+            rigidbody_ball.AddForce(transform.up * forceAmountUP, ForceMode.Force);
             fieldForceChecker.Recalculate();
 
         }
