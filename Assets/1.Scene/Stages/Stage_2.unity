@@ -16312,7 +16312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3447451145318954220, guid: fa90ef4e0fbe6d140909bf82e7d1aa60, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.5
+      value: -15.5
       objectReference: {fileID: 0}
     - target: {fileID: 3447451145318954220, guid: fa90ef4e0fbe6d140909bf82e7d1aa60, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18111,6 +18111,7 @@ MonoBehaviour:
   zero: {fileID: 1036647407}
   MaxZScale: 1.5
   LinearForceFields: []
+  spiralForceFields: []
 --- !u!1001 &1455643287
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1130,6 +1130,7 @@ MonoBehaviour:
   zero: {fileID: 1036647407}
   MaxZScale: 1.5
   LinearForceFields: []
+  spiralForceFields: []
 --- !u!114 &1679244024 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 952948700303354573, guid: e769a8b1049136d48865047c813b1a6f, type: 3}
