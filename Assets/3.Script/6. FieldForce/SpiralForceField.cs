@@ -13,16 +13,22 @@ public class SpiralForceField : MonoBehaviour
     [SerializeField] float effectCooltime;
     [SerializeField] float rotationSpeed;
 
+    [Header("object")]
 
     [Header("È®ÀÎ¿ë")]
     [SerializeField] new Collider collider;
     [SerializeField] FieldForceChecker fieldForceChecker;
     [SerializeField] Rigidbody rigidbody_ball;
+    [Space(5f)]
     [SerializeField] int effectCounter;
     [SerializeField] float activationTimer;
+    [Space(5f)]
+    [SerializeField] List<GameObject> gameObjects_fieldForceObject;
+    [Space(5f)]
     public Vector3 directsionRight;
-
+    [Space(5f)]
     public bool isPlayerOn;
+
 
 
     private void Awake()
@@ -52,7 +58,22 @@ public class SpiralForceField : MonoBehaviour
             rigidbody_ball.AddForce(directsionRight, ForceMode.Force);
             rigidbody_ball.AddForce(transform.up * forceAmountUP, ForceMode.Force);
             fieldForceChecker.Recalculate();
+        }
 
+        if(gameObjects_fieldForceObject.Count != 0)
+        {
+            foreach(GameObject fieldForceObject in gameObjects_fieldForceObject)
+            {
+                Rigidbody rigidbody = fieldForceObject.GetComponent<Rigidbody>();
+                if(rigidbody != null)
+                {
+                    Vector3 Projection = Vector3.ProjectOnPlane(fieldForceObject.transform.position - transform.position, transform.up);
+                    float distance = Projection.magnitude;
+                    Vector3 direction = Quaternion.AngleAxis(135, transform.up) * Projection;
+                    rigidbody.AddForce(direction * forceAmountRight / distance, ForceMode.Force);
+                    rigidbody.AddForce(transform.up * forceAmountUP, ForceMode.Force);
+                }
+            }
         }
     }
 
@@ -62,6 +83,11 @@ public class SpiralForceField : MonoBehaviour
         {
             isPlayerOn = true;
         }
+
+        if (other.CompareTag("FieldForceObject"))
+        {
+            gameObjects_fieldForceObject.Add(other.gameObject);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -69,10 +95,13 @@ public class SpiralForceField : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             isPlayerOn = false;
+            fieldForceChecker.Recalculate();
         }
 
-        fieldForceChecker.Recalculate();
-
+        if (other.CompareTag("FieldForceObject"))
+        {
+            gameObjects_fieldForceObject.Remove(other.gameObject);
+        }
     }
 
     /// <summary>

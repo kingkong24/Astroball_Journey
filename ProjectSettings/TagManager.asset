@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - Animal
   - FieldForceEffect
+  - FieldForceObject
   layers:
   - Default
   - TransparentFX

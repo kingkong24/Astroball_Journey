@@ -54,12 +54,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float_FresnelPower: 0.5
-    - _Float_Opacity: 1
+    - _Float_FresnelPower: 1.2
+    - _Float_Opacity: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color_base: {r: 1, g: 1, b: 0, a: 1}
+    - _Color_base: {r: 8, g: 8, b: 0, a: 1}
     - _Vector2_offset: {r: 0, g: 0, b: 0, a: 0}
     - _Vector2_tiling: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
