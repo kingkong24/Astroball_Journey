@@ -15785,8 +15785,13 @@ MonoBehaviour:
   Arrow: {fileID: 374603844}
   zero: {fileID: 1036647407}
   MaxZScale: 1.5
+  spiralForceFields_exclude: []
+  LinearForceFields_exclude:
+  - {fileID: 1981364013}
+  gravityFields_exclude: []
   LinearForceFields: []
   spiralForceFields: []
+  gravityFields: []
 --- !u!1 &1480115440
 GameObject:
   m_ObjectHideFlags: 0
@@ -23529,6 +23534,7 @@ MonoBehaviour:
   cameraSpinSpeedY: 60
   isFollow: 0
   isPlayerReady: 1
+  isUseGravity: 0
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1928334583
 MonoBehaviour:
@@ -24893,6 +24899,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
+--- !u!114 &1981364013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
+  m_PrefabInstance: {fileID: 1981364012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d094670d5b4b20f40a2d5b4c15393c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1984503314
 GameObject:
   m_ObjectHideFlags: 0

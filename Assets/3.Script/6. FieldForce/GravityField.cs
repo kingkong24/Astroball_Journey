@@ -29,6 +29,7 @@ public class GravityField : MonoBehaviour
             direction = transform.position - transform_ball.position;
             Vector3 force = direction.normalized * gracityForceAmount;
             rigidbody_ball.AddForce(force, ForceMode.Force);
+            fieldForceChecker.Recalculate();
         }
     }
 
@@ -37,7 +38,6 @@ public class GravityField : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             isPlayerOn = true;
-            fieldForceChecker.Recalculate();
         }
     }
 
@@ -46,7 +46,6 @@ public class GravityField : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             isPlayerOn = false;
-            fieldForceChecker.Recalculate();
         }
     }
 }

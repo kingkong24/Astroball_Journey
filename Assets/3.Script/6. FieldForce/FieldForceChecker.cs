@@ -36,6 +36,7 @@ public class FieldForceChecker : MonoBehaviour
         Recalculate();
     }
 
+
     /// <summary>
     /// LinearForceField들의 힘을 재계산하여 나타냅니다.
     /// </summary>
