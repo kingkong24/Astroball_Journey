@@ -31,7 +31,7 @@ public class FieldForceChecker : MonoBehaviour
         gravityFields = gravityFields.Except(gravityFields_exclude.AsEnumerable()).ToArray();
     }
 
-    private void Start()
+    private void Update()
     {
         Recalculate();
     }
