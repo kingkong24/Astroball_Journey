@@ -14,7 +14,7 @@ public class FieldForceChecker : MonoBehaviour
     [SerializeField] SpiralForceField[] spiralForceFields_exclude;
     [SerializeField] LinearForceField[] LinearForceFields_exclude;
     [SerializeField] GravityField[] gravityFields_exclude;
-    
+
     [Header("포함할 역장")]
     [SerializeField] LinearForceField[] LinearForceFields;
     [SerializeField] SpiralForceField[] spiralForceFields;
@@ -26,9 +26,18 @@ public class FieldForceChecker : MonoBehaviour
         spiralForceFields = FindObjectsOfType<SpiralForceField>();
         gravityFields = FindObjectsOfType<GravityField>();
 
-        LinearForceFields = LinearForceFields.Except(LinearForceFields_exclude.AsEnumerable()).ToArray();
-        spiralForceFields = spiralForceFields.Except(spiralForceFields_exclude.AsEnumerable()).ToArray();
-        gravityFields = gravityFields.Except(gravityFields_exclude.AsEnumerable()).ToArray();
+        if (LinearForceFields_exclude != null)
+        {
+            LinearForceFields = LinearForceFields.Except(LinearForceFields_exclude.AsEnumerable()).ToArray();
+        }
+        if (spiralForceFields_exclude != null)
+        {
+            spiralForceFields = spiralForceFields.Except(spiralForceFields_exclude.AsEnumerable()).ToArray();
+        }
+        if (gravityFields_exclude != null)
+        {
+            gravityFields = gravityFields.Except(gravityFields_exclude.AsEnumerable()).ToArray();
+        }
     }
 
     private void Update()
@@ -51,7 +60,7 @@ public class FieldForceChecker : MonoBehaviour
                 totalForce += forceField.forceAmount * forceField.forceDirection;
             }
         }
-        
+
         foreach (SpiralForceField forceField in spiralForceFields)
         {
             if (forceField.isPlayerOn)
