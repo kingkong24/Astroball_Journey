@@ -29,6 +29,7 @@ public class PlayerCameraControl : MonoBehaviour
     [Header("È®ÀÎ¿ë")]
     [SerializeField] bool isFollow = false;
     [SerializeField] bool isPlayerReady = true;
+    public bool isUseGravity = false;
     [SerializeField] Vector3 offset;
 
     private void Awake()
@@ -58,16 +59,19 @@ public class PlayerCameraControl : MonoBehaviour
 
             transform.RotateAround(GameObject_player.transform.position, GameObject_player.transform.up, mouseX * cameraSpinSpeedX * Time.deltaTime);
 
-            float rotationX = transform.rotation.eulerAngles.x;
+            if (!isUseGravity)
+            {
+                float rotationX = transform.rotation.eulerAngles.x - GameObject_player.transform.rotation.eulerAngles.x;
 
-            if (rotationX > 180.0f)
-            {
-                rotationX -= 360.0f;
-            }
-            if (mouseY > 0 && rotationX < 0.0f ||
-                mouseY < 0 && rotationX > 70.0f)
-            {
-                mouseY = 0;
+                if (rotationX > 180.0f)
+                {
+                    rotationX -= 360.0f;
+                }
+                if (mouseY > 0 && rotationX < 0.0f || mouseY < 0 && rotationX > 70.0f)
+                {
+                    mouseY = 0;
+                }
+
             }
             transform.RotateAround(GameObject_player.transform.position, transform.right, -mouseY * cameraSpinSpeedY * Time.deltaTime);
         }
@@ -123,9 +127,10 @@ public class PlayerCameraControl : MonoBehaviour
 
     IEnumerator Co_CameraFollow()
     {
-        while(isFollow)
+        while (isFollow)
         {
             transform.position = Vector3.Lerp(transform.position, GameObject_player.transform.position + offset, Time.deltaTime * cameraFollowSpeed);
+            // CameraInitialise();
             yield return null;
         }
     }
