@@ -66,6 +66,7 @@ public class InfinitePotentialWell2D : MonoBehaviour
         for (int i = 0; i < grids_maze.Length; i++)
         {
             float probability = CalculateProbability(grids_maze[i].x, grids_maze[i].y);
+            Debug.Log(i + "¹øÂ° È®·ü : " + probability);
             TotalProbability += probability;
             probability_grids[i] = TotalProbability;
         }
