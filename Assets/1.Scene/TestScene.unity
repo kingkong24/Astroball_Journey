@@ -1129,8 +1129,12 @@ MonoBehaviour:
   Arrow: {fileID: 374603844}
   zero: {fileID: 1036647407}
   MaxZScale: 1.5
+  spiralForceFields_exclude: []
+  LinearForceFields_exclude: []
+  gravityFields_exclude: []
   LinearForceFields: []
   spiralForceFields: []
+  gravityFields: []
 --- !u!114 &1679244024 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 952948700303354573, guid: e769a8b1049136d48865047c813b1a6f, type: 3}
@@ -1304,6 +1308,7 @@ MonoBehaviour:
   cameraSpinSpeedY: 60
   isFollow: 0
   isPlayerReady: 1
+  isUseGravity: 0
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1928334583
 MonoBehaviour:
@@ -1684,6 +1689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a365d1cbde244be4e88854be602a5856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DampingFactor: 0
 --- !u!114 &4866548928665302976 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7670497041684211720, guid: e769a8b1049136d48865047c813b1a6f, type: 3}

@@ -16,14 +16,14 @@ public struct Maze_grid
     }
 }
 
-public class EllerAlgorithm : MonoBehaviour
+public class MazeEllerAlgorithm : MonoBehaviour
 {
     [Header("미로")]
     [SerializeField] GameObject gameObject_field;
     [SerializeField] GameObject gameObject_wallPrefebs;
     [Tooltip("항상 홀수개만 넣을 것")]
-    [SerializeField] int Number_oneSideGrid;
-    [SerializeField] Vector3 scale_wall;
+    public int Number_oneSideGrid;
+    public Vector3 scale_wall;
     [Range(0, 1)]
     [SerializeField] float probability_wallSpawn;
 
