@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObject_field: {fileID: 499950526}
   gameObject_wallPrefebs: {fileID: 5880009112636402916, guid: 85ebf72b8f5be504aa8e7d32f274a9e1, type: 3}
-  Number_oneSideGrid: 19
+  Number_oneSideGrid: 35
   scale_wall: {x: 6, y: 3, z: 0.1}
   probability_wallSpawn: 0.5
   walls_forword: []
