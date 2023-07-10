@@ -35,11 +35,20 @@ public class ObjectDisappearTime : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            timer = 0;
+        }
+    }
+
     public void OnObject()
     {
         if (boxCollider != null)
             boxCollider.enabled = true;
         if (meshRenderer != null)
             meshRenderer.enabled = true;
+        timer = 0;
     }
 }
