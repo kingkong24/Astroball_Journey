@@ -30,6 +30,7 @@ public class PlayerCameraControl : MonoBehaviour
     [SerializeField] bool isFollow = false;
     [SerializeField] bool isPlayerReady = true;
     public bool isUseGravity = false;
+    public Vector3 playerBackwardDirection;
     [SerializeField] Vector3 offset;
 
     private void Awake()
@@ -108,7 +109,7 @@ public class PlayerCameraControl : MonoBehaviour
 
         Vector3 playerUpDirection = GameObject_player.transform.up;
 
-        Vector3 playerBackwardDirection = -GameObject_player.transform.forward;
+        playerBackwardDirection = -GameObject_player.transform.forward;
 
         Vector3 cameraPosition = playerPosition + (playerUpDirection * cameraDistanceAgainstPlaent) + (playerBackwardDirection * cameraDistanceAgainstTarget);
 

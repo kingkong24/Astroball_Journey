@@ -13,12 +13,16 @@ public class FieldForceCameraMovement : MonoBehaviour
     [SerializeField] float distance = 3.0f;
     [SerializeField] float rotationSpeed = 30.0f;
 
+    [Header("È®ÀÎ¿ë")]
+    [SerializeField] PlayerCameraControl cameraControl;
+
     private void Awake()
     {
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         if (mainCamera != null)
         {
             transform_mainCamera = mainCamera.transform;
+            cameraControl = transform_mainCamera.GetComponent<PlayerCameraControl>();
         }
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -29,8 +33,9 @@ public class FieldForceCameraMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 OffsetDirection = (transform_mainCamera.position - transform_player.position).normalized;
+        Vector3 OffsetDirection = cameraControl.playerBackwardDirection;
         transform.position = transform_target.position + distance * OffsetDirection;
-        transform.LookAt(transform_target);
+        transform.rotation = transform_mainCamera.rotation;
+        // transform.LookAt(transform_target);
     }
 }
