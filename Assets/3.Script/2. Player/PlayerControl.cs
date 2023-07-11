@@ -28,8 +28,7 @@ public class PlayerControl : MonoBehaviour
     [Space(2f)]
     [Header("화살표 회전")]
     [SerializeField] float rotationSpeedUpDown = 90.0f;
-    [SerializeField] float minRotationSpeedLeftRight = 90.0f;
-    [SerializeField] float maxRotationSpeedLeftRight = 360.0f;
+    [SerializeField] float rotationSpeedLeftRight = 90.0f;
 
     [Space(2f)]
     [Header("발사 설정")]
@@ -201,23 +200,18 @@ public class PlayerControl : MonoBehaviour
         Quaternion targetRotationUP = Quaternion.LookRotation(targetForward, UpVector);
         transform.rotation = targetRotationUP;
     }
+
     /// <summary>
     /// Arrow의 방향을 좌우로 움직입니다.
     /// </summary>
     /// <param name="horizon"> horizon 만큼 </param>
     public void PlayerGetHorizontal(float horizon)
     {
-        float distanceToUp = Vector3.Distance(transform.up, Vector3.up);
-        float adjustedRotationSpeed = Mathf.Lerp(minRotationSpeedLeftRight, maxRotationSpeedLeftRight, distanceToUp);
 
-        if (transform.up.y > 0f)
-        {
-            transform.Rotate(transform.up, horizon * adjustedRotationSpeed * Time.deltaTime, Space.Self);
-        }
-        else
-        {
-            transform.Rotate(transform.up, -horizon * adjustedRotationSpeed * Time.deltaTime, Space.Self);
-        }
+        float rotationAngle = horizon * rotationSpeedLeftRight * Time.deltaTime;
+
+        Quaternion rotation = Quaternion.Euler(0f, rotationAngle, 0f);
+        transform.rotation *= rotation;
     }
 
     /// <summary>
