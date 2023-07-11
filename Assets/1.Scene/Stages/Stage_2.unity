@@ -4127,7 +4127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: forceAmount
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: effectCooltime
@@ -21016,6 +21016,7 @@ MonoBehaviour:
   transform_player: {fileID: 0}
   distance: 3
   rotationSpeed: 30
+  cameraControl: {fileID: 0}
 --- !u!1001 &1752951532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23912,6 +23913,7 @@ MonoBehaviour:
   isFollow: 0
   isPlayerReady: 1
   isUseGravity: 0
+  playerBackwardDirection: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1928334583
 MonoBehaviour:

@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: forceAmount
-      value: 3.01
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: effectCooltime
@@ -6869,7 +6869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: forceAmount
-      value: 3.01
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: effectCooltime

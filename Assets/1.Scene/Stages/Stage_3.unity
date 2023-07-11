@@ -18572,6 +18572,7 @@ MonoBehaviour:
   transform_player: {fileID: 0}
   distance: 3
   rotationSpeed: 30
+  cameraControl: {fileID: 0}
 --- !u!1 &1736065388
 GameObject:
   m_ObjectHideFlags: 0
@@ -21771,6 +21772,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 7092297099210746815, guid: 80cd5791d06a0544a8ec17786305d508, type: 3}
+      propertyPath: forceAmountRight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092297099210746815, guid: 80cd5791d06a0544a8ec17786305d508, type: 3}
       propertyPath: gameObjects_effect.Array.size
       value: 50
       objectReference: {fileID: 0}
@@ -23535,6 +23540,7 @@ MonoBehaviour:
   isFollow: 0
   isPlayerReady: 1
   isUseGravity: 0
+  playerBackwardDirection: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1928334583
 MonoBehaviour:
@@ -26894,6 +26900,10 @@ PrefabInstance:
     - target: {fileID: 7092297099210746815, guid: 80cd5791d06a0544a8ec17786305d508, type: 3}
       propertyPath: effectCooltime
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092297099210746815, guid: 80cd5791d06a0544a8ec17786305d508, type: 3}
+      propertyPath: forceAmountRight
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7092297099210746815, guid: 80cd5791d06a0544a8ec17786305d508, type: 3}
       propertyPath: gameObjects_effect.Array.size

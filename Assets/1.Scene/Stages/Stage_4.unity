@@ -1194,7 +1194,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1343783810525539003, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_Radius
-      value: 1.2
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder
@@ -2220,7 +2224,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1343783810525539003, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder
@@ -3383,6 +3391,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1.9
       objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 8.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4021,7 +4033,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1343783810525539003, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 12.4
       objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder
@@ -4167,6 +4183,7 @@ MonoBehaviour:
   transform_player: {fileID: 0}
   distance: 3
   rotationSpeed: 30
+  cameraControl: {fileID: 0}
 --- !u!1 &1759073531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,7 +4702,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1343783810525539003, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 11.2
       objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder
@@ -4797,6 +4818,10 @@ PrefabInstance:
     - target: {fileID: 1343783810525539003, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_Radius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder
@@ -5265,6 +5290,7 @@ MonoBehaviour:
   isFollow: 0
   isPlayerReady: 1
   isUseGravity: 0
+  playerBackwardDirection: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1928334583
 MonoBehaviour:
@@ -5394,7 +5420,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1343783810525539003, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder
@@ -6226,6 +6256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageManager: {fileID: 0}
+  transform_save: {fileID: 0}
+  isDifferent: 0
   Event_ThisSubGoalEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -6328,7 +6360,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1343783810525539003, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389654900502303382, guid: 2fc0fea5229451043b331605ab223504, type: 3}
+      propertyPath: gracityForceAmount
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 2039140421233449430, guid: 2fc0fea5229451043b331605ab223504, type: 3}
       propertyPath: m_RootOrder

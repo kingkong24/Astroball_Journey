@@ -138,7 +138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: forceAmount
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: forceDirection.x
@@ -964,7 +964,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177206897004937259, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: forceAmount
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2538133224814312220, guid: dab5799b339a8fa47980cb71ee28d12b, type: 3}
       propertyPath: m_RootOrder
@@ -3036,7 +3036,12 @@ MonoBehaviour:
   Arrow: {fileID: 374603844}
   zero: {fileID: 1036647407}
   MaxZScale: 1.5
+  spiralForceFields_exclude: []
+  LinearForceFields_exclude: []
+  gravityFields_exclude: []
   LinearForceFields: []
+  spiralForceFields: []
+  gravityFields: []
 --- !u!1001 &1499153481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3475,6 +3480,7 @@ MonoBehaviour:
   transform_player: {fileID: 0}
   distance: 3
   rotationSpeed: 30
+  cameraControl: {fileID: 0}
 --- !u!1 &1748780560
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,6 +3754,8 @@ MonoBehaviour:
   cameraSpinSpeedY: 60
   isFollow: 0
   isPlayerReady: 1
+  isUseGravity: 0
+  playerBackwardDirection: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1928334583
 MonoBehaviour:
