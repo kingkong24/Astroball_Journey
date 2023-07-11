@@ -4737,7 +4737,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   bgmClips:
   - name: BGM_Test
-    clip: {fileID: 8300000, guid: 03d050228011a86469edbd6473f04604, type: 3}
+    clip: {fileID: 8300000, guid: 240edd8a43a7b5d4bafe5e59a83aec26, type: 3}
   bgmVolume: 0.6
   BGMplayer: {fileID: 1760562116}
   sfxVolume: 0.6

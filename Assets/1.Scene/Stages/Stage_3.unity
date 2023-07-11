@@ -5709,6 +5709,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1388156097}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayBGM
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BGM_Mili
+          m_BoolArgument: 0
+        m_CallState: 2
   Event_GamePause:
     m_PersistentCalls:
       m_Calls:
@@ -15389,7 +15401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  bgmClips: []
+  bgmClips:
+  - name: BGM_Mili
+    clip: {fileID: 8300000, guid: ef763b25ef2b59145a46d5b165f42ae7, type: 3}
   bgmVolume: 0.6
   BGMplayer: {fileID: 581948158}
   sfxVolume: 0.6
