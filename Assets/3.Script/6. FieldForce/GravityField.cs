@@ -22,7 +22,7 @@ public class GravityField : MonoBehaviour
         rigidbody_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isPlayerOn && rigidbody_ball != null)
         {

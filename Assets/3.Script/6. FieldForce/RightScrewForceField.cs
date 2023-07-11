@@ -22,7 +22,7 @@ public class RightScrewForceField : MonoBehaviour
         rigidbody_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         foreach (GameObject gameObject_effect in gameObjects_effect)
         {

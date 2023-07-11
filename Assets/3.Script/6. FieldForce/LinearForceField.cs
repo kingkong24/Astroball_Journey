@@ -32,7 +32,7 @@ public class LinearForceField : MonoBehaviour
         Rigidbody_ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         EffectActive();
 
