@@ -3865,6 +3865,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 197435842}
     m_Modifications:
+    - target: {fileID: 4133318549783561459, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5073843440183493646, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3920,6 +3924,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4133318549783561459, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1879760186}
+    - targetCorrespondingSourceObject: {fileID: 4133318549783561459, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1879760188}
   m_SourcePrefab: {fileID: 100100000, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
 --- !u!1 &1879760185 stripped
 GameObject:
@@ -3953,6 +3960,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1099382025073928225, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
   m_PrefabInstance: {fileID: 1879760184}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1879760188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879760185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6b4651b38218a49be6631172ab039b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedPortal: {fileID: 4921649782742053581}
+  cooltime: 0.2
+  isPortalOn: 0
 --- !u!4 &1883829037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5073843440183493646, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
@@ -3976,15 +3998,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7695342095644621645, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 7695342095644621645, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7695342095644621645, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 55
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7695342095644621645, guid: 162f25abcca802b4d86c53d8e87f8d6b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5034,6 +5056,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6239881831769578202, guid: b8de3464b3183fc4fa88e75cd21936b4, type: 3}
+--- !u!4 &4921649782742053581 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1099382025073928225, guid: b83eb6d64aaa91545840560abfd50d9d, type: 3}
+  m_PrefabInstance: {fileID: 4921649782742053578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4921649782742053584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5047,6 +5074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedPortal: {fileID: 1879760187}
+  cooltime: 0.2
+  isPortalOn: 1
 --- !u!114 &5202086500573398486 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5480999934145230193, guid: cd9f017e41c865245ac6041f1f58e2cb, type: 3}

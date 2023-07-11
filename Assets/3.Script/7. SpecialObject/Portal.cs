@@ -7,10 +7,25 @@ public class Portal : MonoBehaviour
     [Header("상대 포탈")]
     [Tooltip("Cylinder를 넣을 것")]
     [SerializeField] Transform connectedPortal;
-    
+
+    [Header("설정")]
+    [SerializeField] float cooltime = 0.2f;
+
+    [Header("확인용")]
+    [SerializeField] Portal Portal_connected;
+    public bool isPortalOn;
+    WaitForSeconds cooldownDuration;
+
+    private void Awake()
+    {
+        isPortalOn = true;
+        cooldownDuration = new WaitForSeconds(cooltime);
+        Portal_connected = connectedPortal.GetComponent<Portal>();
+    }
+
     private void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Ball"))
+        if (col.CompareTag("Ball") && isPortalOn)
         {
             Quaternion rotation = Quaternion.FromToRotation(transform.forward, connectedPortal.forward);
 
@@ -25,9 +40,28 @@ public class Portal : MonoBehaviour
             ballRigidbody.isKinematic = true;
             ballRigidbody.isKinematic = false;
 
-            col.transform.position = connectedPortal.position;
+            StartCoroutine(PortalColltime());
 
+            col.transform.position = connectedPortal.position;
             ballRigidbody.velocity = ballSpeed * ballDirection;
+
+
         }
     }
+
+
+    IEnumerator PortalColltime()
+    {
+        Portal_connected.isPortalOn = false;
+        isPortalOn = false;
+
+        yield return cooldownDuration;
+
+        Portal_connected.isPortalOn = true;
+        isPortalOn = true;
+    }
+
+
+
+
 }
