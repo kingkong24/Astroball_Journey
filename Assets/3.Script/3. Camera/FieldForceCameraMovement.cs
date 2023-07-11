@@ -33,9 +33,8 @@ public class FieldForceCameraMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 OffsetDirection = cameraControl.playerBackwardDirection;
-        transform.position = transform_target.position + distance * OffsetDirection;
         transform.rotation = transform_mainCamera.rotation;
+        transform.position = transform_target.position - distance * transform.forward;
         // transform.LookAt(transform_target);
     }
 }
