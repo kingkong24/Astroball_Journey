@@ -9,9 +9,11 @@ public class Portal : MonoBehaviour
     [SerializeField] Transform connectedPortal;
 
     [Header("설정")]
+    [SerializeField] AudioClip audioClip;
     [SerializeField] float cooltime = 0.2f;
 
     [Header("확인용")]
+    [SerializeField] AudioSource audioSource;
     [SerializeField] Portal Portal_connected;
     public bool isPortalOn;
     WaitForSeconds cooldownDuration;
@@ -21,6 +23,12 @@ public class Portal : MonoBehaviour
         isPortalOn = true;
         cooldownDuration = new WaitForSeconds(cooltime);
         Portal_connected = connectedPortal.GetComponent<Portal>();
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        audioSource.volume = GameManager.instance.MasterVolumes * GameManager.instance.SFXVolumes;
     }
 
     private void OnTriggerEnter(Collider col)
@@ -44,6 +52,8 @@ public class Portal : MonoBehaviour
 
             col.transform.position = connectedPortal.position;
             ballRigidbody.velocity = ballSpeed * ballDirection;
+
+            audioSource.PlayOneShot(audioClip);
 
 
         }

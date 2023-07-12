@@ -45,7 +45,7 @@ public class SpiralForceField : MonoBehaviour
 
         foreach (GameObject gameObject_effect in gameObjects_effect)
         {
-            gameObject_effect.transform.position = gameObject_effect.transform.position + forceAmountUP * transform.up * Time.deltaTime;
+            gameObject_effect.transform.position = gameObject_effect.transform.position + forceAmountUP * Time.deltaTime * transform.up;
             gameObject_effect.transform.RotateAround(transform.position, transform.up, rotationSpeed * Time.deltaTime);
         }
 

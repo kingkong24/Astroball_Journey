@@ -17,7 +17,7 @@ public class Respawner : MonoBehaviour
 
     private void Start()
     {
-        audioSource.volume = GameManager.instance.MasterVolumes * GameManager.instance.SFXVolumes;
+        audioSource.volume = GameManager.instance.MasterVolumes * GameManager.instance.SFXVolumes * 0.5f;
     }
 
 

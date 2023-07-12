@@ -131,7 +131,7 @@ public class StageManager : MonoBehaviour
     {
         isGameClear = true;
         AudioManager audioManager = FindObjectOfType<AudioManager>();
-        audioManager.PlaySFX("SFX_Clapping");
+        audioManager.PlaySFX("SFX_Celebrate");
         Event_GameClear.Invoke();
     }
 
