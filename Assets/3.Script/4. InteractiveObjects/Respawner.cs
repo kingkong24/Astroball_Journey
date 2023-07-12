@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class Respawner : MonoBehaviour
 {
+    [Header("소리")]
+    [SerializeField] AudioClip audioClip;
+
+    [Header("확인용")]
+    [SerializeField] AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        audioSource.volume = GameManager.instance.MasterVolumes * GameManager.instance.SFXVolumes;
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -12,6 +29,7 @@ public class Respawner : MonoBehaviour
             if (playerMovement != null)
             {
                 playerMovement.ResetPlayer();
+                audioSource.PlayOneShot(audioClip);
             }
         }
     }
