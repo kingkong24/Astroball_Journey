@@ -13,6 +13,8 @@ public class TranslateUI : MonoBehaviour
     [SerializeField] Text text_sound;
     [SerializeField] Text text_credits;
     [SerializeField] Text text_Language2;
+    [SerializeField] Text text_Back;
+    [SerializeField] Text text_Select;
 
     public void Translate_Korean()
     {
@@ -23,6 +25,8 @@ public class TranslateUI : MonoBehaviour
         text_sound.text = "소리";
         text_credits.text = "크레딧";
         text_Language2.text = "언어";
+        text_Back.text = "뒤로";
+        text_Select.text = "선택";
     }
 
     public void Translate_English()
@@ -34,6 +38,8 @@ public class TranslateUI : MonoBehaviour
         text_sound.text = "Sound";
         text_credits.text = "Credits";
         text_Language2.text = "Language";
+        text_Back.text = "Back";
+        text_Select.text = "Select";
     }
 
     public void Translate_Chinese()
@@ -45,6 +51,8 @@ public class TranslateUI : MonoBehaviour
         text_sound.text = "声音";
         text_credits.text = "制作人员";
         text_Language2.text = "语言";
+        text_Back.text = "返回";
+        text_Select.text = "选择";
     }
 
     public void Translate_Spanish()
@@ -56,6 +64,8 @@ public class TranslateUI : MonoBehaviour
         text_sound.text = "Sonido";
         text_credits.text = "Créditos";
         text_Language2.text = "Idioma";
+        text_Back.text = "Atrás";
+        text_Select.text = "Seleccionar";
     }
 
 }
