@@ -7,7 +7,7 @@ public class PlayerControl : MonoBehaviour
 {
     [Header("플레이어 오브젝트")]
     [SerializeField] GameObject gameobject_ball;
-    [SerializeField] GameObject gameobject_arrow;
+    public GameObject gameobject_arrow;
 
     [Space(2f)]
     [Header("Target")]
@@ -40,7 +40,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] Rigidbody rigidbody_ball;
     [SerializeField] Quaternion SaveRotation;
     public Vector3 SavePosition;
-    [SerializeField] float arrowScale;
+    public float arrowScale;
     [Space(5f)]
     [SerializeField] bool isReady = true;
     [SerializeField] bool isCharging = false;

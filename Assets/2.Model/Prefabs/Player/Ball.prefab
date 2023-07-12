@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b4503513491464ba387c522ff0a731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip_HitSound: {fileID: 8300000, guid: 7cf717d448fefdf45a48ac0d0e937499, type: 3}
+  audioClip_HitSound: {fileID: 8300000, guid: f3e6a8194a9da1744a4036c563b94030, type: 3}
   gameManager: {fileID: 0}
   audioSource: {fileID: 0}
   rigidbody: {fileID: 0}
