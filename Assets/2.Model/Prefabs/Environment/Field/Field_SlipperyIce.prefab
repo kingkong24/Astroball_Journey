@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4825475652164753481}
   - component: {fileID: 6850745605845855360}
   - component: {fileID: 772224338282217930}
+  - component: {fileID: 4217719293688882195}
   m_Layer: 0
   m_Name: Field_SlipperyIce
   m_TagString: Untagged
@@ -123,4 +124,16 @@ MonoBehaviour:
   originalRigidbody: {fileID: 0}
   originalDrag: 0
   originalAngularDrag: 0
-  isSaved: 0
+--- !u!114 &4217719293688882195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387118862218782550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdea2b9f45881045aa9932de78c865a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 6b25ebfaade642f489feb9403911072e, type: 3}

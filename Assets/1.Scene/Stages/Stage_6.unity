@@ -6873,8 +6873,8 @@ GameObject:
   - component: {fileID: 1495029216}
   - component: {fileID: 1495029220}
   - component: {fileID: 1495029215}
-  - component: {fileID: 1495029219}
   - component: {fileID: 1495029221}
+  - component: {fileID: 1495029219}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -10628,11 +10628,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 935359426283250767, guid: 24f0f2132918e8347b266f2b78d33002, type: 3}
       propertyPath: m_Size.x
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 935359426283250767, guid: 24f0f2132918e8347b266f2b78d33002, type: 3}
       propertyPath: m_Size.z
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 935359426283250767, guid: 24f0f2132918e8347b266f2b78d33002, type: 3}
       propertyPath: m_Center.y

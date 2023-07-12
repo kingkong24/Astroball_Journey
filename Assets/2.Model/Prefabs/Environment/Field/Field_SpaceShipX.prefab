@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3742869698328506337}
   - component: {fileID: 4471051166696686287}
   - component: {fileID: 2714763010830206389}
+  - component: {fileID: -7803190087354381742}
   m_Layer: 0
   m_Name: Field_SpaceShipX
   m_TagString: Untagged
@@ -121,3 +122,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DampingFactor: 0.99
+--- !u!114 &-7803190087354381742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3156335200416537405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdea2b9f45881045aa9932de78c865a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7cf717d448fefdf45a48ac0d0e937499, type: 3}

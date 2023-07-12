@@ -6578,6 +6578,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 935359426283250767, guid: 24f0f2132918e8347b266f2b78d33002, type: 3}
+      propertyPath: m_Center.y
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 7369240518557558999, guid: 24f0f2132918e8347b266f2b78d33002, type: 3}
       propertyPath: m_Name
       value: Respawner

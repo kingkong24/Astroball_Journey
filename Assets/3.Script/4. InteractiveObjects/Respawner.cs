@@ -20,7 +20,6 @@ public class Respawner : MonoBehaviour
         audioSource.volume = GameManager.instance.MasterVolumes * GameManager.instance.SFXVolumes * 0.5f;
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
